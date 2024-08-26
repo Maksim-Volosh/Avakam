@@ -1,13 +1,328 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>main</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Avakam</title>
+
+		<link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<script src="{% static 'js/js.js' %}" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<a href="/" class="header__logo">
+					<img
+						class="header__logo-image"
+						src="{% static 'img/logo-W.png' %}"
+						alt="Логотип сайта 'Avakam'"
+					/>
+				</a>
+
+				<form class="header__form">
+					<input class="header__form-input" type="text" placeholder="Найти" />
+					<button
+						class="header__form-btn header__form-btn_search"
+						type="submit"
+					>
+						seach
+					</button>
+					<button class="header__form-btn header__form-btn_location">
+						location
+					</button>
+					<button class="header__form-btn header__form-btn_filter">
+						filter
+					</button>
+				</form>
+
+				<div class="header__login-buttons">
+					<button class="header__registration-btn">Зарегестрироваться</button>
+					<button class="header__signin-btn">Войти</button>
+				</div>
+
+				<div class="header__actions">
+					<a class="header__actions-favorite" href="/favorite">favorite</a>
+					<a class="header__actions-cart" href="/cart">cart</a>
+					<button class="header__actions-chat">chat</button>
+					<button class="header__actions-reverse">reverse</button>
+					<button class="header__actions-language">language</button>
+				</div>
+
+				<nav class="header__navigation">
+					<ul class="header__navigation-list">
+						<li class="header__navigation-item">
+							<a class="header__navigation-link" href="#">Реклама на сайте</a>
+						</li>
+						<li class="header__navigation-item">
+							<a class="header__navigation-link" href="#">Бизнес на Avakam</a>
+						</li>
+						<li class="header__navigation-item">
+							<a class="header__navigation-link" href="#">Премиум подписка</a>
+						</li>
+						<li class="header__navigation-item">
+							<a class="header__navigation-link" href="#">Правила</a>
+						</li>
+						<li class="header__navigation-item">
+							<a class="header__navigation-link" href="#">О нас</a>
+						</li>
+						<li class="header__navigation-item">
+							<a class="header__navigation-link" href="#">контакты</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main class="main">
+			{% comment %}
+			<section class="advertisement">
+				<div class="container advertisement__container">
+					<ul class="advertisement__list">
+						<li class="advertisement__item">
+							<a href="#" class="advertisement__link">
+								здесь может быть ваша реклама
+							</a>
+						</li>
+						<li class="advertisement__item">
+							<a href="#" class="advertisement__link">
+								здесь может быть ваша реклама
+							</a>
+						</li>
+						<li class="advertisement__item">
+							<a href="#" class="advertisement__link">
+								здесь может быть ваша реклама
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			{% endcomment %}
+
+			<section class="categories">
+				<div class="container categories__container">
+					<ul class="categories__list">
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__social-inner">
+					<ul class="footer__social-list">
+						<li class="footer__social-item">
+							<a class="footer__social-link link-fb" href="#" target="_blank">
+								facebook
+							</a>
+						</li>
+						<li class="footer__social-item">
+							<a class="footer__social-link link-inst" href="#" target="_blank">
+								instagram
+							</a>
+						</li>
+						<li class="footer__social-item">
+							<a
+								class="footer__social-link link-youtube"
+								href="#"
+								target="_blank"
+							>
+								youtube
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__navigation-inner">
+					<ul class="footer__navigation-list">
+						<li class="footer__navigation-item">
+							<a class="footer__navigation-link" href="#" target="_blank">
+								Помощь
+							</a>
+						</li>
+						<li class="footer__navigation-item">
+							<a class="footer__navigation-link" href="#" target="_blank">
+								Реклама на сайте
+							</a>
+						</li>
+						<li class="footer__navigation-item">
+							<a class="footer__navigation-link" href="#" target="_blank">
+								О компании
+							</a>
+						</li>
+						<li class="footer__navigation-item">
+							<a class="footer__navigation-link" href="#" target="_blank">
+								Премиум подписка
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__contacts-inner">
+					<ul class="footer__contacts-list">
+						<li class="footer__contacts-item">
+							<a
+								class="footer__contacts-link"
+								href="mailto:SellPlace@gmail.com"
+								target="_blank"
+							>
+								SellPlace@gmail.com
+							</a>
+						</li>
+						<li class="footer__contacts-item">
+							<a
+								class="footer__contacts-link"
+								href="tel:+375403993028"
+								target="_blank"
+							>
+								+375403993028
+							</a>
+						</li>
+						<li class="footer__contacts-item">
+							<a class="footer__contacts-link" href="#" target="_blank">
+								адрес
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
