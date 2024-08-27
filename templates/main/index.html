@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,11 +14,11 @@
 	<body>
 		<header class="header">
 			<div class="container">
-				<a href="/" class="header__logo">
+				<a href="/" class="header__logo" aria-label="logo">
 					<img
 						class="header__logo-image"
 						src="{% static 'img/logo-W.png' %}"
-						alt="Логотип сайта 'Avakam'"
+						alt="logo for 'Avakam'"
 					/>
 				</a>
 
@@ -27,49 +27,104 @@
 					<button
 						class="header__form-btn header__form-btn_search"
 						type="submit"
+						aria-label="seach"
 					>
 						seach
 					</button>
-					<button class="header__form-btn header__form-btn_location">
+					<button
+						class="header__form-btn header__form-btn_location"
+						aria-label="location"
+					>
 						location
 					</button>
-					<button class="header__form-btn header__form-btn_filter">
+					<button
+						class="header__form-btn header__form-btn_filter"
+						aria-label="filter"
+					>
 						filter
 					</button>
 				</form>
 
 				<div class="header__login-buttons">
-					<button class="header__registration-btn">Зарегестрироваться</button>
-					<button class="header__signin-btn">Войти</button>
+					<button class="header__registration-btn" aria-label="sign up">
+						Зарегестрироваться
+					</button>
+					<button class="header__signin-btn" aria-label="sign in">Войти</button>
 				</div>
 
 				<div class="header__actions">
-					<a class="header__actions-favorite" href="/favorite">favorite</a>
-					<a class="header__actions-cart" href="/cart">cart</a>
-					<button class="header__actions-chat">chat</button>
-					<button class="header__actions-reverse">reverse</button>
-					<button class="header__actions-language">language</button>
+					<a
+						class="header__actions-favorite"
+						href="#"
+						aria-label="favorite products"
+					>
+						favorite
+					</a>
+					<a class="header__actions-cart" href="#" aria-label="cart"> cart </a>
+					<a
+						class="header__actions-chat"
+						href="#"
+						aria-label="chat with seller"
+					>
+						chat
+					</a>
+					<button
+						class="header__actions-reverse"
+						aria-label="change color theme of the website"
+					>
+						reverse
+					</button>
+					<button
+						class="header__actions-language"
+						aria-label="change language of the website"
+					>
+						language
+					</button>
 				</div>
 
 				<nav class="header__navigation">
 					<ul class="header__navigation-list">
 						<li class="header__navigation-item">
-							<a class="header__navigation-link" href="#">Реклама на сайте</a>
+							<a
+								class="header__navigation-link"
+								href="#"
+								aria-label="advertising on the site"
+							>
+								Реклама на сайте
+							</a>
 						</li>
 						<li class="header__navigation-item">
-							<a class="header__navigation-link" href="#">Бизнес на Avakam</a>
+							<a
+								class="header__navigation-link"
+								href="#"
+								aria-label="business on Avakam"
+							>
+								Бизнес на Avakam
+							</a>
 						</li>
 						<li class="header__navigation-item">
-							<a class="header__navigation-link" href="#">Премиум подписка</a>
+							<a
+								class="header__navigation-link"
+								href="#"
+								aria-label="premium subscription"
+							>
+								Премиум подписка
+							</a>
 						</li>
 						<li class="header__navigation-item">
-							<a class="header__navigation-link" href="#">Правила</a>
+							<a class="header__navigation-link" href="#" aria-label="rules">
+								Правила
+							</a>
 						</li>
 						<li class="header__navigation-item">
-							<a class="header__navigation-link" href="#">О нас</a>
+							<a class="header__navigation-link" href="#" aria-label="about us">
+								О нас
+							</a>
 						</li>
 						<li class="header__navigation-item">
-							<a class="header__navigation-link" href="#">контакты</a>
+							<a class="header__navigation-link" href="#" aria-label="contacts">
+								контакты
+							</a>
 						</li>
 					</ul>
 				</nav>
@@ -77,8 +132,10 @@
 		</header>
 
 		<main class="main">
+			<h1 class="visually-hidden">we happy welcome yours on the our site</h1>
 			{% comment %}
 			<section class="advertisement">
+				<h2 class="visually-hidden">this is place for the yours advertising</h2>
 				<div class="container advertisement__container">
 					<ul class="advertisement__list">
 						<li class="advertisement__item">
@@ -102,17 +159,22 @@
 			{% endcomment %}
 
 			<section class="categories">
+				<h2 class="visually-hidden">categories of our site</h2>
 				<div class="container categories__container">
 					<ul class="categories__list">
 						<li class="categories__item">
-							<a href="#" class="categories__link">
+							<a
+								class="categories__link"
+								href="#"
+								aria-label="element of category"
+							>
 								<article class="categories__aticle">
 									<div class="categories__article-background">
 										<picture>
 											<img
 												class="categories__article-image"
 												src="{% static 'img/housing.png' %}"
-												alt="Изображение названия категории"
+												alt="image of category"
 											/>
 										</picture>
 									</div>
@@ -242,19 +304,293 @@
 					</ul>
 				</div>
 			</section>
+
+			<section class="products">
+				<div class="container">
+					<h2 class="visually-hidden">products of our site</h2>
+					<div class="products__recomendation-inner">
+						<p class="products__recomendation-desc">Рекомендации для вас</p>
+						<button
+							class="products__recomendation-location"
+							aria-label="location"
+						>
+							location
+						</button>
+						<button class="products__recomendation-filter" aria-label="filter">
+							filter
+						</button>
+						<button class="products__recomendation-sort" aria-label="sort">
+							sort
+						</button>
+					</div>
+
+					<div class="product__inner">
+						<div class="products__goods-inner">
+							<ul class="products__goods-list" arai-label="goods">
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="products__advertisement-inner">
+							<ul
+								class="products__advertisement-list"
+								arai-label="advertisement"
+							>
+								<li class="products__advertisement-item">
+									<a
+										class="products__advertisement-link"
+										href="#"
+										aria-label="advertisement"
+									>
+										<p class="products__advertisement-desc">
+											здесь может быть ваша реклама
+										</p>
+									</a>
+								</li>
+								<li class="products__advertisement-item">
+									<a
+										class="products__advertisement-link"
+										href="#"
+										aria-label="advertisement"
+									>
+										<p class="products__advertisement-desc">
+											здесь может быть ваша реклама
+										</p>
+									</a>
+								</li>
+								<li class="products__advertisement-item">
+									<a
+										class="products__advertisement-link"
+										href="#"
+										aria-label="advertisement"
+									>
+										<p class="products__advertisement-desc">
+											здесь может быть ваша реклама
+										</p>
+									</a>
+								</li>
+								<li class="products__advertisement-item">
+									<a
+										class="products__advertisement-link"
+										href="#"
+										aria-label="advertisement"
+									>
+										<p class="products__advertisement-desc">
+											здесь может быть ваша реклама
+										</p>
+									</a>
+								</li>
+								<li class="products__advertisement-item">
+									<a
+										class="products__advertisement-link"
+										href="#"
+										aria-label="advertisement"
+									>
+										<p class="products__advertisement-desc">
+											здесь может быть ваша реклама
+										</p>
+									</a>
+								</li>
+								<li class="products__advertisement-item">
+									<a
+										class="products__advertisement-link"
+										href="#"
+										aria-label="advertisement"
+									>
+										<p class="products__advertisement-desc">
+											здесь может быть ваша реклама
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__social-inner">
-					<ul class="footer__social-list">
+					<ul class="footer__social-list" aria-label="our social networks">
 						<li class="footer__social-item">
-							<a class="footer__social-link link-fb" href="#" target="_blank">
+							<a
+								class="footer__social-link link-fb"
+								href="#"
+								aria-label="facebook"
+								target="_blank"
+							>
 								facebook
 							</a>
 						</li>
 						<li class="footer__social-item">
-							<a class="footer__social-link link-inst" href="#" target="_blank">
+							<a
+								class="footer__social-link link-inst"
+								href="#"
+								aria-label="instagram"
+								target="_blank"
+							>
 								instagram
 							</a>
 						</li>
@@ -262,6 +598,7 @@
 							<a
 								class="footer__social-link link-youtube"
 								href="#"
+								aria-label="youtube"
 								target="_blank"
 							>
 								youtube
@@ -271,24 +608,44 @@
 				</div>
 
 				<div class="footer__navigation-inner">
-					<ul class="footer__navigation-list">
+					<ul class="footer__navigation-list" aria-label="site navigation">
 						<li class="footer__navigation-item">
-							<a class="footer__navigation-link" href="#" target="_blank">
+							<a
+								class="footer__navigation-link"
+								href="#"
+								aria-label="help"
+								target="_blank"
+							>
 								Помощь
 							</a>
 						</li>
 						<li class="footer__navigation-item">
-							<a class="footer__navigation-link" href="#" target="_blank">
+							<a
+								class="footer__navigation-link"
+								href="#"
+								aria-label="advertising on the site"
+								target="_blank"
+							>
 								Реклама на сайте
 							</a>
 						</li>
 						<li class="footer__navigation-item">
-							<a class="footer__navigation-link" href="#" target="_blank">
+							<a
+								class="footer__navigation-link"
+								href="#"
+								aria-label="about of the company"
+								target="_blank"
+							>
 								О компании
 							</a>
 						</li>
 						<li class="footer__navigation-item">
-							<a class="footer__navigation-link" href="#" target="_blank">
+							<a
+								class="footer__navigation-link"
+								href="#"
+								aria-label="premium subscription"
+								target="_blank"
+							>
 								Премиум подписка
 							</a>
 						</li>
@@ -296,11 +653,12 @@
 				</div>
 
 				<div class="footer__contacts-inner">
-					<ul class="footer__contacts-list">
+					<ul class="footer__contacts-list" aria-label="contacts">
 						<li class="footer__contacts-item">
 							<a
 								class="footer__contacts-link"
 								href="mailto:SellPlace@gmail.com"
+								aria-label="email"
 								target="_blank"
 							>
 								SellPlace@gmail.com
@@ -310,13 +668,19 @@
 							<a
 								class="footer__contacts-link"
 								href="tel:+375403993028"
+								aria-label="tel number"
 								target="_blank"
 							>
 								+375403993028
 							</a>
 						</li>
 						<li class="footer__contacts-item">
-							<a class="footer__contacts-link" href="#" target="_blank">
+							<a
+								class="footer__contacts-link"
+								href="#"
+								aria-label="address"
+								target="_blank"
+							>
 								адрес
 							</a>
 						</li>
