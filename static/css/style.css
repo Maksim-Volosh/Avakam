@@ -11,15 +11,26 @@ html {
 }
 
 :root {
+	/* ! Fonts */
+	--demibold: 'TTTravels-Demibold', sans-serif;
+	--regular: 'TTTravels-Regular', sans-serif;
+	--light: 'TTTravels-Light', sans-serif;
+
+	/* ! colors */
+	--background-white: #fff;
+	--background-black: #121412;
+	--color-white: #fff;
+	--color-black: #000;
+	--green-color: #009b2b;
 }
 
 body {
 	min-width: 320px;
-	/* font-family: Inter, sans-serif; */
-	/* font-size: 14px; */
-	/* line-height: 1.2; */
-	/* color: #171717; */
-	/* background-color: #f3f4f8; */
+	font-family: var(--demibold);
+	font-size: 24px;
+	line-height: 1.2;
+	background-color: var(--background-white);
+	color: var(--color-black);
 }
 
 img,
@@ -61,6 +72,10 @@ fieldset {
 	padding: 0;
 	margin: 0;
 	border: 0;
+}
+
+input {
+	outline: none;
 }
 
 input[type='number']::-webkit-outer-spin-button,

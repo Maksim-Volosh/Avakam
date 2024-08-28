@@ -1,0 +1,122 @@
+.header {
+	padding: 32px 0;
+}
+
+.header__top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 23px;
+	margin-bottom: 24px;
+}
+
+.header__logo {
+	width: 139px;
+	height: 87px;
+	flex-shrink: 0;
+}
+
+.header__form {
+	position: relative;
+	width: 100%;
+	max-width: 630px;
+}
+
+.header__form-input {
+	width: 100%;
+	padding: 8px;
+	padding-right: 110px;
+	border: 3px solid var(--green-color);
+	border-radius: 12px;
+}
+
+.header__form-btns {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	gap: 15px;
+}
+
+.header__form-btn_search {
+	width: 21px;
+	height: 21px;
+}
+
+.header__form-btn_location {
+	width: 15px;
+	height: 21px;
+}
+
+.header__form-btn_filter {
+	width: 23px;
+	height: 20px;
+}
+
+.header__login-buttons {
+	display: flex;
+	gap: 23px;
+}
+
+.header__login-btn {
+	height: 58px;
+	padding: 0 31px;
+	border: 3px solid transparent;
+	border-radius: 12px;
+	font-size: 15px;
+}
+
+.header__login-btn_registration {
+	width: 236px;
+	background-color: var(--green-color);
+	color: var(--color-white);
+}
+
+.header__login-btn_signin {
+	width: 140px;
+	border-color: var(--green-color);
+}
+
+.header__actions {
+	display: flex;
+	align-items: center;
+	gap: 35px;
+}
+
+.header__actions-favorite {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+
+.header__actions-chat {
+	width: 20px;
+	height: 20px;
+}
+
+.header__actions-reverse {
+	width: 20px;
+	height: 20px;
+}
+
+.header__actions-language {
+	font-size: 26px;
+	letter-spacing: -0.06em;
+	text-transform: lowercase;
+}
+
+.header__navigation-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.header__navigation-item {
+	color: var(--color-black);
+}
+
+.header__navigation-link {
+	transition: color 0.3s ease-in-out;
+}
