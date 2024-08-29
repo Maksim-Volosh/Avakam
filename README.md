@@ -28,9 +28,14 @@ Follow these steps to set up the project on your local machine:
    ```
 
 3. **Create a virtual environment:**
-   ```sh
-   python -m venv .venv
-   ```
+   - On Windows:
+     ```sh
+     python -m venv .venv
+     ```
+   - On macOS/Linux:
+     ```sh
+     python3 -m venv .venv
+     ```
 
 4. **Activate the virtual environment:**
    - On Windows:
@@ -43,9 +48,14 @@ Follow these steps to set up the project on your local machine:
      ```
 
 5. **Install the requirements:**
-   ```sh
-   pip install -r requirements.txt
-   ```
+   - On Windows:
+     ```sh
+     pip install -r requirements.txt
+     ```
+   - On macOS/Linux:
+     ```sh
+     pip3 install -r requirements.txt
+     ```
    
 6. **Create config file - `config.py` in main directory**
    
@@ -58,15 +68,26 @@ Follow these steps to set up the project on your local machine:
 
      
 7. **Make migrations and migrate the database:**
-   ```sh
-   python manage.py makemigrations
-   python manage.py migrate
-   ```
+   - On Windows:
+     ```sh
+      python manage.py makemigrations
+      python manage.py migrate
+      ```
+   - On macOS/Linux:
+     ```sh
+     python3 manage.py makemigrations
+     python3 manage.py migrate
+     ```
 
 8. **Run the server:**
-   ```sh
-   python manage.py runserver
-   ```
+   - On Windows:
+     ```sh
+      python manage.py runserver
+      ```
+   - On macOS/Linux:
+     ```sh
+     python3 manage.py runserver
+      ```
 
 ## Usage
 
@@ -74,14 +95,24 @@ Once the server is running, open your web browser and navigate to `http://127.0.
 
 How to use admin panel?? 
 1. **Create an superuser 'Admin user'**
-   ```sh
-   python manage.py createsuperuser
-   ```
+   - On Windows:
+      ```sh
+      python manage.py createsuperuser
+      ```
+   - On macOS/Linux:
+     ```sh
+     python3 manage.py createsuperuser
+      ```
 
 2. **Run the server:**
-   ```sh
-   python manage.py runserver
-   ```
+   - On Windows:
+     ```sh
+      python manage.py runserver
+      ```
+   - On macOS/Linux:
+     ```sh
+     python3 manage.py runserver
+      ```
 
 3. **Go to `http://127.0.0.1:8000/admin`**
    * And login using a previously registered user
