@@ -1,4 +1,7 @@
+from __future__ import absolute_import, unicode_literals
+
 from pathlib import Path
+
 from config import *
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,6 +23,8 @@ INSTALLED_APPS = [
     
     'main.apps.MainConfig',
     'user.apps.UserConfig',
+    'advertisement.apps.AdvertisementConfig',
+    
 ]
 
 MIDDLEWARE = [
