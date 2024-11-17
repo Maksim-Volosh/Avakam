@@ -1,0 +1,18 @@
+{% load user_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Login</h2>
+  <form method="post" action="{% url 'user:login' %}{% nextpage request %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+    <a href="{% url 'user:register' %}{% nextpage request %}">Register</a>
+  </form>
+</body>
+</html>

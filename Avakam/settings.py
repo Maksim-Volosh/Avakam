@@ -1,4 +1,7 @@
+from __future__ import absolute_import, unicode_literals
+from datetime import timedelta
 from pathlib import Path
+
 from config import *
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,6 +22,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'main.apps.MainConfig',
+    'user.apps.UserConfig',
+    'advertisement.apps.AdvertisementConfig',
+    
+    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -93,3 +100,15 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'user.User'
+LOGIN_URL = '/user/login/'
+
+CELERY_BROKER_URL = 'redis://redis:6379/0'
+CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
+CELERY_BEAT_SCHEDULE = {
+    'delete_expired_ads_every_minute': {
+        'task': 'advertisement.tasks.delete_expired_advertisements',
+        'schedule':  timedelta(hours=12),
+    },
+}
