@@ -1,17 +1,717 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>main</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-    {{ user }} <br>
-    {{ user.first_name }} <br>
-    {{ user.email }} <br>
-    {{ user.phone }} <br>
-</body>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Avakam</title>
+
+		<link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+		<script src="{% static 'js/js.js' %}" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__top">
+					<a href="/" class="header__logo" aria-label="logo">
+						<img
+							class="header__logo-image"
+							src="{% static 'img/logo-W.png' %}"
+							alt="logo for 'Avakam'"
+						/>
+					</a>
+
+					<form class="header__form">
+						<input class="header__form-input" type="text" placeholder="Найти" />
+						<div class="header__form-btns">
+							<button
+								class="header__form-btn header__form-btn_search"
+								type="submit"
+								aria-label="seach"
+							>
+								<svg>
+									<use xlink:href="../../static/img/sprite.svg#search-icon" />
+								</svg>
+							</button>
+							<button
+								class="header__form-btn header__form-btn_location"
+								aria-label="location"
+							>
+								<svg>
+									<use xlink:href="../../static/img/sprite.svg#location-icon" />
+								</svg>
+							</button>
+							<button
+								class="header__form-btn header__form-btn_filter"
+								aria-label="filter"
+							>
+								<svg>
+									<use xlink:href="../../static/img/sprite.svg#filter-icon" />
+								</svg>
+							</button>
+						</div>
+					</form>
+
+					<div class="header__login-buttons">
+						<button
+							class="header__login-btn header__login-btn_registration"
+							aria-label="sign up"
+						>
+							Зарегестрироваться
+						</button>
+						<button
+							class="header__login-btn header__login-btn_signin"
+							aria-label="sign in"
+						>
+							Войти
+						</button>
+					</div>
+
+					<div class="header__actions">
+						<a
+							class="header__actions-favorite"
+							href="#"
+							aria-label="favorite products"
+						>
+							<svg>
+								<use xlink:href="../../static/img/sprite.svg#favorite-icon" />
+							</svg>
+						</a>
+						<a
+							class="header__actions-chat"
+							href="#"
+							aria-label="chat with seller"
+						>
+							<svg>
+								<use xlink:href="../../static/img/sprite.svg#chat-icon" />
+							</svg>
+						</a>
+						<button
+							class="header__actions-reverse"
+							aria-label="change color theme of the website"
+						>
+							<svg>
+								<use xlink:href="../../static/img/sprite.svg#moon-icon" />
+							</svg>
+						</button>
+						<button
+							class="header__actions-language"
+							aria-label="change language of the website"
+						>
+							ru
+						</button>
+					</div>
+				</div>
+
+				<nav class="header__navigation">
+					<ul class="header__navigation-list">
+						<li class="header__navigation-item">
+							<a
+								class="header__navigation-link"
+								href="#"
+								aria-label="advertising on the site"
+							>
+								Реклама на сайте
+							</a>
+						</li>
+						<li class="header__navigation-item">
+							<a
+								class="header__navigation-link"
+								href="#"
+								aria-label="business on Avakam"
+							>
+								Бизнес на Avakam
+							</a>
+						</li>
+						<li class="header__navigation-item">
+							<a
+								class="header__navigation-link"
+								href="#"
+								aria-label="premium subscription"
+							>
+								Премиум подписка
+							</a>
+						</li>
+						<li class="header__navigation-item">
+							<a class="header__navigation-link" href="#" aria-label="rules">
+								Правила
+							</a>
+						</li>
+						<li class="header__navigation-item">
+							<a class="header__navigation-link" href="#" aria-label="about us">
+								О нас
+							</a>
+						</li>
+						<li class="header__navigation-item">
+							<a class="header__navigation-link" href="#" aria-label="contacts">
+								Контакты
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main class="main">
+			<h1 class="visually-hidden">we happy welcome yours on the our site</h1>
+			{% comment %}
+			<section class="advertisement">
+				<h2 class="visually-hidden">this is place for the yours advertising</h2>
+				<div class="container advertisement__container">
+					<ul class="advertisement__list">
+						<li class="advertisement__item">
+							<a href="#" class="advertisement__link">
+								здесь может быть ваша реклама
+							</a>
+						</li>
+						<li class="advertisement__item">
+							<a href="#" class="advertisement__link">
+								здесь может быть ваша реклама
+							</a>
+						</li>
+						<li class="advertisement__item">
+							<a href="#" class="advertisement__link">
+								здесь может быть ваша реклама
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			{% endcomment %}
+
+			<section class="categories">
+				<h2 class="visually-hidden">categories of our site</h2>
+				<div class="container categories__container">
+					<ul class="categories__list">
+						<li class="categories__item">
+							<a
+								class="categories__link"
+								href="#"
+								aria-label="element of category"
+							>
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="image of category"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+
+						<li class="categories__item">
+							<a href="#" class="categories__link">
+								<article class="categories__aticle">
+									<div class="categories__article-background">
+										<picture>
+											<img
+												class="categories__article-image"
+												src="{% static 'img/housing.png' %}"
+												alt="Изображение названия категории"
+											/>
+										</picture>
+									</div>
+									<p class="categories__article-desc">жильё</p>
+								</article>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="products">
+				<div class="container">
+					<h2 class="visually-hidden">products of our site</h2>
+					<div class="products__recomendation-inner">
+						<p class="products__recomendation-desc">Рекомендации для вас</p>
+						<button
+							class="products__recomendation-location"
+							aria-label="location"
+						>
+							location
+						</button>
+						<button class="products__recomendation-filter" aria-label="filter">
+							filter
+						</button>
+						<button class="products__recomendation-sort" aria-label="sort">
+							sort
+						</button>
+					</div>
+
+					<div class="products__inner">
+						<div class="products__goods-inner">
+							<ul class="products__goods-list" arai-label="goods">
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+								<li class="products__goods-item">
+									<a href="" class="products__goods-link">
+										<article class="products__goods-article">
+											<div class="products__goods-inner-img">
+												{% comment %}
+												<img src="" alt="" class="products__goods-img" />
+												{%endcomment %}
+											</div>
+											<p class="products__goods-price">450 €</p>
+											<h3 class="products__goods-title">Название товара</h3>
+											<p class="products__goods-location">
+												<span class="products__goods-city">Город</span>,
+												<span class="products__goods-district">Район</span>
+											</p>
+											<p class="products__goods-time">Дата и время</p>
+										</article>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="products__advertisement-inner">
+							<ul
+								class="products__advertisement-list"
+								arai-label="advertisement"
+							>
+								<li class="products__advertisement-item">
+									<a
+										class="products__advertisement-link"
+										href="#"
+										aria-label="advertisement"
+									>
+										<p class="products__advertisement-desc">
+											здесь может быть ваша реклама
+										</p>
+									</a>
+								</li>
+								<li class="products__advertisement-item">
+									<a
+										class="products__advertisement-link"
+										href="#"
+										aria-label="advertisement"
+									>
+										<p class="products__advertisement-desc">
+											здесь может быть ваша реклама
+										</p>
+									</a>
+								</li>
+								<li class="products__advertisement-item">
+									<a
+										class="products__advertisement-link"
+										href="#"
+										aria-label="advertisement"
+									>
+										<p class="products__advertisement-desc">
+											здесь может быть ваша реклама
+										</p>
+									</a>
+								</li>
+								<li class="products__advertisement-item">
+									<a
+										class="products__advertisement-link"
+										href="#"
+										aria-label="advertisement"
+									>
+										<p class="products__advertisement-desc">
+											здесь может быть ваша реклама
+										</p>
+									</a>
+								</li>
+								<li class="products__advertisement-item">
+									<a
+										class="products__advertisement-link"
+										href="#"
+										aria-label="advertisement"
+									>
+										<p class="products__advertisement-desc">
+											здесь может быть ваша реклама
+										</p>
+									</a>
+								</li>
+								<li class="products__advertisement-item">
+									<a
+										class="products__advertisement-link"
+										href="#"
+										aria-label="advertisement"
+									>
+										<p class="products__advertisement-desc">
+											здесь может быть ваша реклама
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__social-inner">
+					<ul class="footer__social-list" aria-label="our social networks">
+						<li class="footer__social-item">
+							<a
+								class="footer__social-link link-fb"
+								href="#"
+								aria-label="facebook"
+								target="_blank"
+							>
+								facebook
+							</a>
+						</li>
+						<li class="footer__social-item">
+							<a
+								class="footer__social-link link-inst"
+								href="#"
+								aria-label="instagram"
+								target="_blank"
+							>
+								instagram
+							</a>
+						</li>
+						<li class="footer__social-item">
+							<a
+								class="footer__social-link link-youtube"
+								href="#"
+								aria-label="youtube"
+								target="_blank"
+							>
+								youtube
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__navigation-inner">
+					<ul class="footer__navigation-list" aria-label="site navigation">
+						<li class="footer__navigation-item">
+							<a
+								class="footer__navigation-link"
+								href="#"
+								aria-label="help"
+								target="_blank"
+							>
+								Помощь
+							</a>
+						</li>
+						<li class="footer__navigation-item">
+							<a
+								class="footer__navigation-link"
+								href="#"
+								aria-label="advertising on the site"
+								target="_blank"
+							>
+								Реклама на сайте
+							</a>
+						</li>
+						<li class="footer__navigation-item">
+							<a
+								class="footer__navigation-link"
+								href="#"
+								aria-label="about of the company"
+								target="_blank"
+							>
+								О компании
+							</a>
+						</li>
+						<li class="footer__navigation-item">
+							<a
+								class="footer__navigation-link"
+								href="#"
+								aria-label="premium subscription"
+								target="_blank"
+							>
+								Премиум подписка
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__contacts-inner">
+					<ul class="footer__contacts-list" aria-label="contacts">
+						<li class="footer__contacts-item">
+							<a
+								class="footer__contacts-link"
+								href="mailto:SellPlace@gmail.com"
+								aria-label="email"
+								target="_blank"
+							>
+								SellPlace@gmail.com
+							</a>
+						</li>
+						<li class="footer__contacts-item">
+							<a
+								class="footer__contacts-link"
+								href="tel:+375403993028"
+								aria-label="tel number"
+								target="_blank"
+							>
+								+375403993028
+							</a>
+						</li>
+						<li class="footer__contacts-item">
+							<a
+								class="footer__contacts-link"
+								href="#"
+								aria-label="address"
+								target="_blank"
+							>
+								адрес
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>

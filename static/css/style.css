@@ -1,3 +1,104 @@
+html {
+	scroll-behavior: smooth;
+	position: relative;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+:root {
+	/* ! Fonts */
+	--demibold: 'TTTravels-Demibold', sans-serif;
+	--regular: 'TTTravels-Regular', sans-serif;
+	--light: 'TTTravels-Light', sans-serif;
+
+	/* ! colors */
+	--background-white: #fff;
+	--background-black: #121412;
+	--color-white: #fff;
+	--color-black: #000;
+	--green-color: #009b2b;
+}
+
 body {
-    background-color: #f5f5f5;
+	min-width: 320px;
+	font-family: var(--demibold);
+	font-size: 24px;
+	line-height: 1.2;
+	background-color: var(--background-white);
+	color: var(--color-black);
+}
+
+img,
+svg {
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+input {
+	outline: none;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type='number'],
+input[type='number']:hover,
+input[type='number']:focus {
+	appearance: none;
+	-moz-appearance: textfield;
+}
+
+.visually-hidden {
+	position: fixed;
+	transform: scale(0);
+}
+
+.container {
+	--width: 1620px;
+	--padding: 150px;
+	max-width: calc(var(--width) + var(--padding) * 2);
+	margin: 0 auto;
+	padding: 0 var(--padding);
 }
