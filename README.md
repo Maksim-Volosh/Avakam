@@ -17,22 +17,27 @@ Avakum is an all-in-one platform designed to streamline the process of buying, s
 
 Follow these steps to set up the project on your local machine:
 
-1. **Clone this repository to your computer:**
+### 1. Clone this repository to your computer:
    ```sh
    git clone https://github.com/Maksim-Volosh/Avakam.git
    ```
 
-2. **Navigate to the project directory:**
+### 2. Navigate to the project directory:
    ```sh
    cd Avakam
    ```
 
-3. **Create a virtual environment:**
-   ```sh
-   python -m venv .venv
-   ```
+### 3. Create a virtual environment:
+   - On Windows:
+      ```sh
+      python -m venv .venv
+      ```
+   - On macOS/Linux:
+      ```sh
+      python3 -m venv .venv
+      ```
 
-4. **Activate the virtual environment:**
+### 4. Activate the virtual environment:
    - On Windows:
      ```sh
      .venv\Scripts\activate
@@ -42,12 +47,17 @@ Follow these steps to set up the project on your local machine:
      source .venv/bin/activate
      ```
 
-5. **Install the requirements:**
-   ```sh
-   pip install -r requirements.txt
-   ```
+### 5. Install the requirements:
+   - On Windows:
+      ```sh
+      pip install -r requirements.txt
+      ```
+   - On macOS/Linux:
+      ```sh
+      pip3 install -r requirements.txt
+      ```
    
-6. **Create config file - `config.py` in main directory**
+### 6. Create config file - `config.py` in main directory
    
    And in this file add:
    ```python
@@ -57,16 +67,40 @@ Follow these steps to set up the project on your local machine:
    * Your secret key can be any characters, for example - 'slgsldfkwhiutyfwbx3-=^%#*c3487'
 
      
-7. **Make migrations and migrate the database:**
-   ```sh
-   python manage.py makemigrations
-   python manage.py migrate
-   ```
+### 7.  Make migrations and migrate the database:
+   - On Windows:
+      ```sh
+      python manage.py makemigrations
+      python manage.py migrate
+      ```
+   - On macOS/Linux:
+      ```sh
+      python3 manage.py makemigrations
+      python3 manage.py migrate
+      ```
 
-8. **Run the server:**
-   ```sh
-   python manage.py runserver
-   ```
+### 8. Run the server:
+   - ### The first and easiest way:
+      #### With this method, the site will have incomplete functionality since there is no connection to dependencies
+      - On Windows:
+         ```sh
+         python manage.py runserver
+         ```
+      - On macOS/Linux:
+         ```sh
+         python3 manage.py runserver
+         ```
+
+   - #### The second way is through the docker:
+      - On Windows:
+         ```sh
+         docker-compose up --build
+         ```
+      - On macOS/Linux:
+         ```sh
+         sudo docker-compose up --build
+         ```
+         ##### "sudo" may not be necessary
 
 ## Usage
 
@@ -88,7 +122,7 @@ How to use admin panel??
      
    Congratulations!! You have successfully getting permission to access the admin panel
 
-## For Front-End Developers
+# For Front-End Developers
 
 If you are working on the front-end part of the project, here's where you'll find the relevant files:
 
