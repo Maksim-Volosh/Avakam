@@ -12,21 +12,21 @@ html {
 
 :root {
 	/* ! Fonts */
-	--demibold: 'TTTravels-Demibold', sans-serif;
-	--regular: 'TTTravels-Regular', sans-serif;
-	--light: 'TTTravels-Light', sans-serif;
+	--TTTravels-DB: 'TTTravels-Demibold', sans-serif;
+	--TTTravels-Regular: 'TTTravels-Regular', sans-serif;
+	--TTTravels-Light: 'TTTravels-Light', sans-serif;
 
 	/* ! colors */
 	--background-white: #fff;
 	--background-black: #121412;
 	--color-white: #fff;
 	--color-black: #000;
-	--green-color: #009b2b;
+	--color-green: #009b2b;
 }
 
 body {
 	min-width: 320px;
-	font-family: var(--demibold);
+	font-family: var(--TTTravels-DB);
 	font-size: 24px;
 	line-height: 1.2;
 	background-color: var(--background-white);
@@ -96,9 +96,17 @@ input[type='number']:focus {
 }
 
 .container {
-	--width: 1620px;
-	--padding: 150px;
-	max-width: calc(var(--width) + var(--padding) * 2);
+	max-width: 1540px;
+	padding: 0 50px;
 	margin: 0 auto;
-	padding: 0 var(--padding);
 }
+
+/* 
+@media (min-width: 1441px) {
+	! стили для адаптива к 4к
+}
+
+@media (max-width: 1200px) {
+	! стили для адаптива к мобилке
+} 
+*/

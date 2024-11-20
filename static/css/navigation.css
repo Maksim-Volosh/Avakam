@@ -1,0 +1,13 @@
+.navigation__list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navigation__item {
+	color: var(--color-black);
+}
+
+.navigation__link {
+	font-size: 24px;
+}
