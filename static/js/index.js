@@ -8,7 +8,7 @@ const adSwiperMainOptions = {
 		disableOnInteraction: false,
 		pauseOnMouseEnter: false,
 	},
-	speed: 5000,
+	speed: 7000,
 	slidesPerView: 3.5,
 };
 

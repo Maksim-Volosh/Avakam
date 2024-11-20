@@ -17,19 +17,17 @@
 		<link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/header.css' %}" />
-		<link rel="stylesheet" href="{% static 'css/advertisement.css' %}" />
-		<link rel="stylesheet" href="{% static 'css/categories.css' %}" />
-		<link rel="stylesheet" href="{% static 'css/products.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/index/advertisement.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/index/categories.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/index/products.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/footer.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/navigation.css' %}" />
 
-		{% block extrahead %}
 		<script
 			src="{% static '../../static/js/vars/swiper-bundle.min.js' %}"
 			defer
 		></script>
 		<script src="{% static '../../static/js/index.js' %}" defer></script>
-		{% endblock %}
 	</head>
 	<body>
 		<header class="header">
@@ -47,7 +45,6 @@
 						<input class="header__form-input" type="text" placeholder="Найти" />
 						<div class="header__form-btns">
 							<button class="header__form-btn" type="submit" aria-label="seach">
-								{% load static %}
 								<svg class="header__form-btn-search">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#search-icon"
@@ -55,7 +52,6 @@
 								</svg>
 							</button>
 							<button class="header__form-btn" aria-label="location">
-								{% load static %}
 								<svg class="header__form-btn-location">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#location-icon"
@@ -63,7 +59,6 @@
 								</svg>
 							</button>
 							<button class="header__form-btn" aria-label="filter">
-								{% load static %}
 								<svg class="header__form-btn-filter">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#filter-icon"
@@ -90,7 +85,6 @@
 
 					<div class="header__actions">
 						<a class="header__action" href="#" aria-label="favorite products">
-							{% load static %}
 							<svg class="header__action-favorite">
 								<use
 									xlink:href="{% static '../../static/img/sprite.svg' %}#favorite-icon"
@@ -98,7 +92,6 @@
 							</svg>
 						</a>
 						<a class="header__action" href="#" aria-label="chat with seller">
-							{% load static %}
 							<svg class="header__action-chat">
 								<use
 									xlink:href="{% static '../../static/img/sprite.svg' %}#chat-icon"
@@ -109,13 +102,11 @@
 							class="header__action"
 							aria-label="change color theme of the website"
 						>
-							{% comment %} ! темная тема {% endcomment %} {% load static %}
 							<svg class="header__action-reverse reverse-active">
 								<use
 									xlink:href="{% static '../../static/img/sprite.svg' %}#moon-icon"
 								/>
 							</svg>
-							{% comment %} ! светлая тема {% endcomment %} {% load static %}
 							<svg class="header__action-reverse">
 								<use
 									xlink:href="{% static '../../static/img/sprite.svg' %}#sun-icon"
@@ -488,7 +479,6 @@
 								class="products__recommendation-action"
 								aria-label="location"
 							>
-								{% load static %}
 								<svg class="products__recommendation-action-location">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#location-icon"
@@ -499,7 +489,6 @@
 								class="products__recommendation-action"
 								aria-label="filter"
 							>
-								{% load static %}
 								<svg class="products__recommendation-action-filter">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#filter-icon"
@@ -507,7 +496,6 @@
 								</svg>
 							</button>
 							<button class="products__recommendation-action" aria-label="sort">
-								{% load static %}
 								<svg class="products__recommendation-action-sort">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#sort-icon"
@@ -538,7 +526,6 @@
 											</p>
 											<p class="goods__time">Дата и время</p>
 											<button class="goods__options">
-												{% load static %}
 												<svg class="goods__options-svg">
 													<use
 														xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
@@ -566,7 +553,6 @@
 											</p>
 											<p class="goods__time">Дата и время</p>
 											<button class="goods__options">
-												{% load static %}
 												<svg class="goods__options-svg">
 													<use
 														xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
@@ -594,7 +580,6 @@
 											</p>
 											<p class="goods__time">Дата и время</p>
 											<button class="goods__options">
-												{% load static %}
 												<svg class="goods__options-svg">
 													<use
 														xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
@@ -622,7 +607,6 @@
 											</p>
 											<p class="goods__time">Дата и время</p>
 											<button class="goods__options">
-												{% load static %}
 												<svg class="goods__options-svg">
 													<use
 														xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
@@ -650,7 +634,6 @@
 											</p>
 											<p class="goods__time">Дата и время</p>
 											<button class="goods__options">
-												{% load static %}
 												<svg class="goods__options-svg">
 													<use
 														xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
@@ -705,7 +688,6 @@
 								aria-label="facebook"
 								target="_blank"
 							>
-								{% load static %}
 								<svg class="social__svg">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#facebook-icon"
@@ -720,7 +702,6 @@
 								aria-label="instagram"
 								target="_blank"
 							>
-								{% load static %}
 								<svg class="social__svg">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#instagram-icon"
@@ -735,7 +716,6 @@
 								aria-label="youtube"
 								target="_blank"
 							>
-								{% load static %}
 								<svg class="social__svg">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#youtube-icon"
@@ -803,7 +783,6 @@
 								aria-label="email"
 								target="_blank"
 							>
-								{% load static %}
 								<svg class="contacts__svg">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#mail-icon"
@@ -819,7 +798,6 @@
 								aria-label="tel number"
 								target="_blank"
 							>
-								{% load static %}
 								<svg class="contacts__svg">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#phone-icon"
@@ -835,7 +813,6 @@
 								aria-label="address"
 								target="_blank"
 							>
-								{% load static %}
 								<svg class="contacts__svg">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#address-icon"
