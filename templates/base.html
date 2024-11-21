@@ -16,9 +16,7 @@
 		<link rel="stylesheet" href="{% static 'css/footer.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/navigation.css' %}" />
 
-        {% block links %}{% endblock links %}
-
-		{% block js %}{% endblock js %}
+		{% block links %}{% endblock links %} {% block js %}{% endblock js %}
 	</head>
 	<body>
 		<header class="header">
@@ -35,7 +33,12 @@
 					<form class="header__form">
 						<input class="header__form-input" type="text" placeholder="Найти" />
 						<div class="header__form-btns">
-							<button class="header__form-btn" type="submit" aria-label="seach">
+							<button
+								id="js-main-search-products"
+								class="header__form-btn"
+								type="button"
+								aria-label="seach"
+							>
 								<svg class="header__form-btn-search">
 									<use
 										xlink:href="{% static '../../static/img/sprite.svg' %}#search-icon"
@@ -165,8 +168,7 @@
 			</div>
 		</header>
 
-		{% block main %}
-        {% endblock main %}
+		{% block main %} {% endblock main %}
 
 		<footer class="footer">
 			<div class="container">
@@ -319,10 +321,13 @@
 
 		<script>
 			// Проверяем тему браузера: тёмная или светлая
-			const userTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-		  
+			const userTheme = window.matchMedia('(prefers-color-scheme: dark)')
+				.matches
+				? 'dark'
+				: 'light';
+
 			// Сохраняем тему в cookie
 			document.cookie = `theme=${userTheme}; path=/; SameSite=Lax`;
-		  </script>
+		</script>
 	</body>
 </html>

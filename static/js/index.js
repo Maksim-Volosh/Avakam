@@ -1,15 +1,22 @@
+//! swiper
+
 const adSwiperMainPageNode = document.getElementById('js-ad-main-sw');
 
 const adSwiperMainOptions = {
+	slidesPerView: 4,
+	spaceBetween: 30,
+	centeredSlides: true,
 	loop: true,
-	spaceBetween: 32,
+	speed: 2500,
 	autoplay: {
-		delay: 0,
+		delay: 3000,
 		disableOnInteraction: false,
 		pauseOnMouseEnter: false,
+		reverseDirection: false,
 	},
-	speed: 7000,
-	slidesPerView: 3.5,
+	fadeEffect: { crossFade: true },
 };
 
 const swiperAdMainPage = new Swiper(adSwiperMainPageNode, adSwiperMainOptions);
+
+//! path listing_not_found.html
