@@ -1,18 +1,23 @@
-{% extends "base.html" %} {% load static %} {% block title %}Avakam{% endblock
-title %} {% block links %}
+{% extends "base.html" %} 
+{% load static %} 
 
+{% block title %}Avakam{% endblock title %} {% block links %}
 <link rel="stylesheet" href="{% static 'css/vars/swiper-bundle.min.css' %}" />
 
 <link rel="stylesheet" href="{% static 'css/index/advertisement.css' %}" />
 <link rel="stylesheet" href="{% static 'css/index/categories.css' %}" />
 <link rel="stylesheet" href="{% static 'css/index/products.css' %}" />
-{% endblock links %} {% block js %}
+{% endblock links %} 
+
+{% block js %}
 <script
-	src="{% static '../../static/js/vars/swiper-bundle.min.js' %}"
+	src="{% static 'js/vars/swiper-bundle.min.js' %}"
 	defer
 ></script>
-<script src="{% static '../../static/js/index.js' %}" defer></script>
-{% endblock js %} {% block main %}
+<script src="{% static 'js/index.js' %}" defer></script>
+{% endblock js %} 
+
+{% block main %}
 <main class="main">
 	<h1 class="">we happy welcome yours on the our site</h1>
 </main>
