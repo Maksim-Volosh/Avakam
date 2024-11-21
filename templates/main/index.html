@@ -1,546 +1,528 @@
-{% extends "base.html" %}
-{% load static %}
-
+{% extends "base.html" %} 
+{% load static %} 
 {% block title %}Avakam{% endblock title %}
-
 {% block links %}
 
-<link
-rel="stylesheet"
-href="{% static 'css/vars/swiper-bundle.min.css' %}"/>
+<link rel="stylesheet" href="{% static 'css/vars/swiper-bundle.min.css' %}" />
 
 <link rel="stylesheet" href="{% static 'css/index/advertisement.css' %}" />
 <link rel="stylesheet" href="{% static 'css/index/categories.css' %}" />
 <link rel="stylesheet" href="{% static 'css/index/products.css' %}" />
-{% endblock links %}
-
-{% block js %}
+{% endblock links %} {% block js %}
 <script
-src="{% static '../../static/js/vars/swiper-bundle.min.js' %}"
-defer
+	src="{% static '../../static/js/vars/swiper-bundle.min.js' %}"
+	defer
 ></script>
 <script src="{% static '../../static/js/index.js' %}" defer></script>
-{% endblock js %}
+{% endblock js %} {% block main %}
+<main class="main">
+	<h1 class="visually-hidden">we happy welcome yours on the our site</h1>
+	<section class="advertisement">
+		<h2 class="visually-hidden">this is place for the yours advertising</h2>
+		<div class="container advertisement__container">
+			{% comment %}
+			<ul class="advertisement__list">
+				<li class="advertisement__item">
+					<a href="#" class="advertisement__link">
+						здесь может быть ваша реклама
+					</a>
+				</li>
+				<li class="advertisement__item">
+					<a href="#" class="advertisement__link">
+						здесь может быть ваша реклама
+					</a>
+				</li>
+				<li class="advertisement__item">
+					<a href="#" class="advertisement__link">
+						здесь может быть ваша реклама
+					</a>
+				</li>
+			</ul>
+			{% endcomment %}
 
-{% block main %}
-		<main class="main">
-			<h1 class="visually-hidden">we happy welcome yours on the our site</h1>
-			<section class="advertisement">
-				<h2 class="visually-hidden">this is place for the yours advertising</h2>
-				<div class="container advertisement__container">
-					{% comment %}
-					<ul class="advertisement__list">
-						<li class="advertisement__item">
-							<a href="#" class="advertisement__link">
-								здесь может быть ваша реклама
+			<!-- Slider main container -->
+			<div id="js-ad-main-sw" class="swiper advertisement__swiper">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper advertisement__swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide advertisement__swiper-slide">
+						<a
+							href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0"
+							class="advertisement__slide-link"
+							target="_blanck"
+						>
+							здесь может быть ваша реклама
+						</a>
+					</div>
+					<div class="swiper-slide advertisement__swiper-slide">
+						<a
+							href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0"
+							class="advertisement__slide-link"
+							target="_blanck"
+						>
+							здесь может быть ваша реклама
+						</a>
+					</div>
+					<div class="swiper-slide advertisement__swiper-slide">
+						<a
+							href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0"
+							class="advertisement__slide-link"
+							target="_blanck"
+						>
+							здесь может быть ваша реклама
+						</a>
+					</div>
+					<div class="swiper-slide advertisement__swiper-slide">
+						<a
+							href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%D1%8B%D0%B5_%D0%BA%D0%BE%D0%BC%D0%BC%D1%83%D0%BD%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8"
+							class="advertisement__slide-link"
+							target="_blanck"
+						>
+							здесь может быть ваша реклама
+						</a>
+					</div>
+					<div class="swiper-slide advertisement__swiper-slide">
+						<a
+							href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%BD%D0%B0%D1%8F_%D0%BA%D0%B0%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F"
+							class="advertisement__slide-link"
+							target="_blanck"
+						>
+							здесь может быть ваша реклама
+						</a>
+					</div>
+					<div class="swiper-slide advertisement__swiper-slide">
+						<a
+							href="https://ru.wikipedia.org/wiki/%D0%90%D1%81%D1%81%D0%BE%D1%80%D1%82%D0%B8%D0%BC%D0%B5%D0%BD%D1%82"
+							class="advertisement__slide-link"
+							target="_blanck"
+						>
+							здесь может быть ваша реклама
+						</a>
+					</div>
+					<div class="swiper-slide advertisement__swiper-slide">
+						<a
+							href="https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%BB%D1%83%D0%B3%D0%B0"
+							class="advertisement__slide-link"
+							target="_blanck"
+						>
+							здесь может быть ваша реклама
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="categories">
+		<h2 class="visually-hidden">categories of our site</h2>
+		<div class="container categories__container">
+			<ul class="categories__list">
+				<li class="categories__item">
+					<a class="categories__link" href="#" aria-label="element of category">
+						<article class="categories__aticle">
+							<div class="categories__article-background">
+								<picture>
+									<img
+										class="categories__article-image"
+										src="{% static 'img/housing.png' %}"
+										alt="image of category"
+									/>
+								</picture>
+							</div>
+							<p class="categories__article-desc">жильё</p>
+						</article>
+					</a>
+				</li>
+
+				<li class="categories__item">
+					<a href="#" class="categories__link">
+						<article class="categories__aticle">
+							<div class="categories__article-background">
+								<picture>
+									<img
+										class="categories__article-image"
+										src="{% static 'img/housing.png' %}"
+										alt="Изображение названия категории"
+									/>
+								</picture>
+							</div>
+							<p class="categories__article-desc">жильё</p>
+						</article>
+					</a>
+				</li>
+
+				<li class="categories__item">
+					<a href="#" class="categories__link">
+						<article class="categories__aticle">
+							<div class="categories__article-background">
+								<picture>
+									<img
+										class="categories__article-image"
+										src="{% static 'img/housing.png' %}"
+										alt="Изображение названия категории"
+									/>
+								</picture>
+							</div>
+							<p class="categories__article-desc">жильё</p>
+						</article>
+					</a>
+				</li>
+
+				<li class="categories__item">
+					<a href="#" class="categories__link">
+						<article class="categories__aticle">
+							<div class="categories__article-background">
+								<picture>
+									<img
+										class="categories__article-image"
+										src="{% static 'img/housing.png' %}"
+										alt="Изображение названия категории"
+									/>
+								</picture>
+							</div>
+							<p class="categories__article-desc">жильё</p>
+						</article>
+					</a>
+				</li>
+
+				<li class="categories__item">
+					<a href="#" class="categories__link">
+						<article class="categories__aticle">
+							<div class="categories__article-background">
+								<picture>
+									<img
+										class="categories__article-image"
+										src="{% static 'img/housing.png' %}"
+										alt="Изображение названия категории"
+									/>
+								</picture>
+							</div>
+							<p class="categories__article-desc">жильё</p>
+						</article>
+					</a>
+				</li>
+
+				<li class="categories__item">
+					<a href="#" class="categories__link">
+						<article class="categories__aticle">
+							<div class="categories__article-background">
+								<picture>
+									<img
+										class="categories__article-image"
+										src="{% static 'img/housing.png' %}"
+										alt="Изображение названия категории"
+									/>
+								</picture>
+							</div>
+							<p class="categories__article-desc">жильё</p>
+						</article>
+					</a>
+				</li>
+
+				<li class="categories__item">
+					<a href="#" class="categories__link">
+						<article class="categories__aticle">
+							<div class="categories__article-background">
+								<picture>
+									<img
+										class="categories__article-image"
+										src="{% static 'img/housing.png' %}"
+										alt="Изображение названия категории"
+									/>
+								</picture>
+							</div>
+							<p class="categories__article-desc">жильё</p>
+						</article>
+					</a>
+				</li>
+
+				<li class="categories__item">
+					<a href="#" class="categories__link">
+						<article class="categories__aticle">
+							<div class="categories__article-background">
+								<picture>
+									<img
+										class="categories__article-image"
+										src="{% static 'img/housing.png' %}"
+										alt="Изображение названия категории"
+									/>
+								</picture>
+							</div>
+							<p class="categories__article-desc">жильё</p>
+						</article>
+					</a>
+				</li>
+
+				<li class="categories__item">
+					<a href="#" class="categories__link">
+						<article class="categories__aticle">
+							<div class="categories__article-background">
+								<picture>
+									<img
+										class="categories__article-image"
+										src="{% static 'img/housing.png' %}"
+										alt="Изображение названия категории"
+									/>
+								</picture>
+							</div>
+							<p class="categories__article-desc">жильё</p>
+						</article>
+					</a>
+				</li>
+
+				<li class="categories__item">
+					<a href="#" class="categories__link">
+						<article class="categories__aticle">
+							<div class="categories__article-background">
+								<picture>
+									<img
+										class="categories__article-image"
+										src="{% static 'img/housing.png' %}"
+										alt="Изображение названия категории"
+									/>
+								</picture>
+							</div>
+							<p class="categories__article-desc">жильё</p>
+						</article>
+					</a>
+				</li>
+
+				<li class="categories__item">
+					<a href="#" class="categories__link">
+						<article class="categories__aticle">
+							<div class="categories__article-background">
+								<picture>
+									<img
+										class="categories__article-image"
+										src="{% static 'img/housing.png' %}"
+										alt="Изображение названия категории"
+									/>
+								</picture>
+							</div>
+							<p class="categories__article-desc">жильё</p>
+						</article>
+					</a>
+				</li>
+
+				<li class="categories__item">
+					<a href="#" class="categories__link">
+						<article class="categories__aticle">
+							<div class="categories__article-background">
+								<picture>
+									<img
+										class="categories__article-image"
+										src="{% static 'img/housing.png' %}"
+										alt="Изображение названия категории"
+									/>
+								</picture>
+							</div>
+							<p class="categories__article-desc">жильё</p>
+						</article>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="products">
+		<div class="container products__container">
+			<h2 class="visually-hidden">products of our site</h2>
+			<div class="products__recommendation-inner">
+				<p class="products__recommendation-desc">Рекомендации для вас</p>
+				<div class="products__recommendation-actions">
+					<button class="products__recommendation-action" aria-label="location">
+						<svg class="products__recommendation-action-location">
+							<use
+								xlink:href="{% static '../../static/img/sprite.svg' %}#location-icon"
+							/>
+						</svg>
+					</button>
+					<button class="products__recommendation-action" aria-label="filter">
+						<svg class="products__recommendation-action-filter">
+							<use
+								xlink:href="{% static '../../static/img/sprite.svg' %}#filter-icon"
+							/>
+						</svg>
+					</button>
+					<button class="products__recommendation-action" aria-label="sort">
+						<svg class="products__recommendation-action-sort">
+							<use
+								xlink:href="{% static '../../static/img/sprite.svg' %}#sort-icon"
+							/>
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<div class="products__inner">
+				<div class="products__goods-inner goods">
+					<ul class="goods__list" arai-label="goods">
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="../../static/img/housing.png"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+									<p class="goods__price">450 €</p>
+									<h3 class="goods__title">Название товара</h3>
+									<p class="goods__location">
+										<span class="goods__city">Город</span>,
+										<span class="goods__district">Район</span>
+									</p>
+									<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__options">
+									<svg class="goods__options-svg">
+										<use
+											xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
+										/>
+									</svg>
+								</button>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="../../static/img/housing.png"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+									<p class="goods__price">450 €</p>
+									<h3 class="goods__title">Название товара</h3>
+									<p class="goods__location">
+										<span class="goods__city">Город</span>,
+										<span class="goods__district">Район</span>
+									</p>
+									<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__options">
+									<svg class="goods__options-svg">
+										<use
+											xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
+										/>
+									</svg>
+								</button>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="../../static/img/housing.png"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+									<p class="goods__price">450 €</p>
+									<h3 class="goods__title">Название товара</h3>
+									<p class="goods__location">
+										<span class="goods__city">Город</span>,
+										<span class="goods__district">Район</span>
+									</p>
+									<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__options">
+									<svg class="goods__options-svg">
+										<use
+											xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
+										/>
+									</svg>
+								</button>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="../../static/img/housing.png"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+									<p class="goods__price">450 €</p>
+									<h3 class="goods__title">Название товара</h3>
+									<p class="goods__location">
+										<span class="goods__city">Город</span>,
+										<span class="goods__district">Район</span>
+									</p>
+									<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__options">
+									<svg class="goods__options-svg">
+										<use
+											xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
+										/>
+									</svg>
+								</button>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="../../static/img/housing.png"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+									<p class="goods__price">450 €</p>
+									<h3 class="goods__title">Название товара</h3>
+									<p class="goods__location">
+										<span class="goods__city">Город</span>,
+										<span class="goods__district">Район</span>
+									</p>
+									<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__options">
+									<svg class="goods__options-svg">
+										<use
+											xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
+										/>
+									</svg>
+								</button>
+							</article>
+						</li>
+					</ul>
+				</div>
+
+				<div class="products__advertisement-inner ad">
+					<ul class="ad__list" arai-label="advertisement">
+						<li class="ad__item">
+							<a class="ad__link" href="#!" aria-label="advertisement">
+								<img src="#!" alt="img yours ad" class="ad__image" />
+								<p class="ad__desc">здесь может быть ваша реклама</p>
 							</a>
 						</li>
-						<li class="advertisement__item">
-							<a href="#" class="advertisement__link">
-								здесь может быть ваша реклама
-							</a>
-						</li>
-						<li class="advertisement__item">
-							<a href="#" class="advertisement__link">
-								здесь может быть ваша реклама
+
+						<li class="ad__item">
+							<a class="ad__link" href="#!" aria-label="advertisement">
+								<img src="#!" alt="img yours ad" class="ad__image" />
+								<p class="ad__desc">
+									здесь может быть ваша реклама с огромным колличеством
+									контента: Lorem ipsum dolor, sit amet consectetur adipisicing
+									elit. Excepturi totam, iusto minus fuga aliquid consequatur
+									esse nostrum vitae harum natus rem numquam omnis autem. Ea
+									velit porro veniam eum, quae voluptatibus magni! Sunt quos
+									quasi consequuntur ad a officiis, doloremque officia, nam
+									dolores est aperiam! Voluptatum magni libero soluta
+									consectetur!
+								</p>
 							</a>
 						</li>
 					</ul>
-					{% endcomment %}
-
-					<!-- Slider main container -->
-					<div id="js-ad-main-sw" class="swiper advertisement__swiper">
-						<!-- Additional required wrapper -->
-						<div class="swiper-wrapper advertisement__swiper-wrapper">
-							<!-- Slides -->
-							<div class="swiper-slide advertisement__swiper-slide">
-								<a
-									href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0"
-									class="advertisement__slide-link"
-									target="_blanck"
-								>
-									здесь может быть ваша реклама
-								</a>
-							</div>
-							<div class="swiper-slide advertisement__swiper-slide">
-								<a
-									href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0"
-									class="advertisement__slide-link"
-									target="_blanck"
-								>
-									здесь может быть ваша реклама
-								</a>
-							</div>
-							<div class="swiper-slide advertisement__swiper-slide">
-								<a
-									href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0"
-									class="advertisement__slide-link"
-									target="_blanck"
-								>
-									здесь может быть ваша реклама
-								</a>
-							</div>
-							<div class="swiper-slide advertisement__swiper-slide">
-								<a
-									href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%D1%8B%D0%B5_%D0%BA%D0%BE%D0%BC%D0%BC%D1%83%D0%BD%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8"
-									class="advertisement__slide-link"
-									target="_blanck"
-								>
-									здесь может быть ваша реклама
-								</a>
-							</div>
-							<div class="swiper-slide advertisement__swiper-slide">
-								<a
-									href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%BD%D0%B0%D1%8F_%D0%BA%D0%B0%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F"
-									class="advertisement__slide-link"
-									target="_blanck"
-								>
-									здесь может быть ваша реклама
-								</a>
-							</div>
-							<div class="swiper-slide advertisement__swiper-slide">
-								<a
-									href="https://ru.wikipedia.org/wiki/%D0%90%D1%81%D1%81%D0%BE%D1%80%D1%82%D0%B8%D0%BC%D0%B5%D0%BD%D1%82"
-									class="advertisement__slide-link"
-									target="_blanck"
-								>
-									здесь может быть ваша реклама
-								</a>
-							</div>
-							<div class="swiper-slide advertisement__swiper-slide">
-								<a
-									href="https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%BB%D1%83%D0%B3%D0%B0"
-									class="advertisement__slide-link"
-									target="_blanck"
-								>
-									здесь может быть ваша реклама
-								</a>
-							</div>
-						</div>
-					</div>
 				</div>
-			</section>
-
-			<section class="categories">
-				<h2 class="visually-hidden">categories of our site</h2>
-				<div class="container categories__container">
-					<ul class="categories__list">
-						<li class="categories__item">
-							<a
-								class="categories__link"
-								href="#"
-								aria-label="element of category"
-							>
-								<article class="categories__aticle">
-									<div class="categories__article-background">
-										<picture>
-											<img
-												class="categories__article-image"
-												src="{% static 'img/housing.png' %}"
-												alt="image of category"
-											/>
-										</picture>
-									</div>
-									<p class="categories__article-desc">жильё</p>
-								</article>
-							</a>
-						</li>
-
-						<li class="categories__item">
-							<a href="#" class="categories__link">
-								<article class="categories__aticle">
-									<div class="categories__article-background">
-										<picture>
-											<img
-												class="categories__article-image"
-												src="{% static 'img/housing.png' %}"
-												alt="Изображение названия категории"
-											/>
-										</picture>
-									</div>
-									<p class="categories__article-desc">жильё</p>
-								</article>
-							</a>
-						</li>
-
-						<li class="categories__item">
-							<a href="#" class="categories__link">
-								<article class="categories__aticle">
-									<div class="categories__article-background">
-										<picture>
-											<img
-												class="categories__article-image"
-												src="{% static 'img/housing.png' %}"
-												alt="Изображение названия категории"
-											/>
-										</picture>
-									</div>
-									<p class="categories__article-desc">жильё</p>
-								</article>
-							</a>
-						</li>
-
-						<li class="categories__item">
-							<a href="#" class="categories__link">
-								<article class="categories__aticle">
-									<div class="categories__article-background">
-										<picture>
-											<img
-												class="categories__article-image"
-												src="{% static 'img/housing.png' %}"
-												alt="Изображение названия категории"
-											/>
-										</picture>
-									</div>
-									<p class="categories__article-desc">жильё</p>
-								</article>
-							</a>
-						</li>
-
-						<li class="categories__item">
-							<a href="#" class="categories__link">
-								<article class="categories__aticle">
-									<div class="categories__article-background">
-										<picture>
-											<img
-												class="categories__article-image"
-												src="{% static 'img/housing.png' %}"
-												alt="Изображение названия категории"
-											/>
-										</picture>
-									</div>
-									<p class="categories__article-desc">жильё</p>
-								</article>
-							</a>
-						</li>
-
-						<li class="categories__item">
-							<a href="#" class="categories__link">
-								<article class="categories__aticle">
-									<div class="categories__article-background">
-										<picture>
-											<img
-												class="categories__article-image"
-												src="{% static 'img/housing.png' %}"
-												alt="Изображение названия категории"
-											/>
-										</picture>
-									</div>
-									<p class="categories__article-desc">жильё</p>
-								</article>
-							</a>
-						</li>
-
-						<li class="categories__item">
-							<a href="#" class="categories__link">
-								<article class="categories__aticle">
-									<div class="categories__article-background">
-										<picture>
-											<img
-												class="categories__article-image"
-												src="{% static 'img/housing.png' %}"
-												alt="Изображение названия категории"
-											/>
-										</picture>
-									</div>
-									<p class="categories__article-desc">жильё</p>
-								</article>
-							</a>
-						</li>
-
-						<li class="categories__item">
-							<a href="#" class="categories__link">
-								<article class="categories__aticle">
-									<div class="categories__article-background">
-										<picture>
-											<img
-												class="categories__article-image"
-												src="{% static 'img/housing.png' %}"
-												alt="Изображение названия категории"
-											/>
-										</picture>
-									</div>
-									<p class="categories__article-desc">жильё</p>
-								</article>
-							</a>
-						</li>
-
-						<li class="categories__item">
-							<a href="#" class="categories__link">
-								<article class="categories__aticle">
-									<div class="categories__article-background">
-										<picture>
-											<img
-												class="categories__article-image"
-												src="{% static 'img/housing.png' %}"
-												alt="Изображение названия категории"
-											/>
-										</picture>
-									</div>
-									<p class="categories__article-desc">жильё</p>
-								</article>
-							</a>
-						</li>
-
-						<li class="categories__item">
-							<a href="#" class="categories__link">
-								<article class="categories__aticle">
-									<div class="categories__article-background">
-										<picture>
-											<img
-												class="categories__article-image"
-												src="{% static 'img/housing.png' %}"
-												alt="Изображение названия категории"
-											/>
-										</picture>
-									</div>
-									<p class="categories__article-desc">жильё</p>
-								</article>
-							</a>
-						</li>
-
-						<li class="categories__item">
-							<a href="#" class="categories__link">
-								<article class="categories__aticle">
-									<div class="categories__article-background">
-										<picture>
-											<img
-												class="categories__article-image"
-												src="{% static 'img/housing.png' %}"
-												alt="Изображение названия категории"
-											/>
-										</picture>
-									</div>
-									<p class="categories__article-desc">жильё</p>
-								</article>
-							</a>
-						</li>
-
-						<li class="categories__item">
-							<a href="#" class="categories__link">
-								<article class="categories__aticle">
-									<div class="categories__article-background">
-										<picture>
-											<img
-												class="categories__article-image"
-												src="{% static 'img/housing.png' %}"
-												alt="Изображение названия категории"
-											/>
-										</picture>
-									</div>
-									<p class="categories__article-desc">жильё</p>
-								</article>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-			<section class="products">
-				<div class="container products__container">
-					<h2 class="visually-hidden">products of our site</h2>
-					<div class="products__recommendation-inner">
-						<p class="products__recommendation-desc">Рекомендации для вас</p>
-						<div class="products__recommendation-actions">
-							<button
-								class="products__recommendation-action"
-								aria-label="location"
-							>
-								<svg class="products__recommendation-action-location">
-									<use
-										xlink:href="{% static '../../static/img/sprite.svg' %}#location-icon"
-									/>
-								</svg>
-							</button>
-							<button
-								class="products__recommendation-action"
-								aria-label="filter"
-							>
-								<svg class="products__recommendation-action-filter">
-									<use
-										xlink:href="{% static '../../static/img/sprite.svg' %}#filter-icon"
-									/>
-								</svg>
-							</button>
-							<button class="products__recommendation-action" aria-label="sort">
-								<svg class="products__recommendation-action-sort">
-									<use
-										xlink:href="{% static '../../static/img/sprite.svg' %}#sort-icon"
-									/>
-								</svg>
-							</button>
-						</div>
-					</div>
-
-					<div class="products__inner">
-						<div class="products__goods-inner goods">
-							<ul class="goods__list" arai-label="goods">
-								<li class="goods__item">
-									<a href="" class="goods__link">
-										<article class="goods__article">
-											<div class="goods__inner-img">
-												<img
-													src="../../static/img/housing.png"
-													alt=""
-													class="goods__img"
-												/>
-											</div>
-											<p class="goods__price">450 €</p>
-											<h3 class="goods__title">Название товара</h3>
-											<p class="goods__location">
-												<span class="goods__city">Город</span>,
-												<span class="goods__district">Район</span>
-											</p>
-											<p class="goods__time">Дата и время</p>
-											<button class="goods__options">
-												<svg class="goods__options-svg">
-													<use
-														xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
-													/>
-												</svg>
-											</button>
-										</article>
-									</a>
-								</li>
-								<li class="goods__item">
-									<a href="" class="goods__link">
-										<article class="goods__article">
-											<div class="goods__inner-img">
-												<img
-													src="../../static/img/housing.png"
-													alt=""
-													class="goods__img"
-												/>
-											</div>
-											<p class="goods__price">450 €</p>
-											<h3 class="goods__title">Название товара</h3>
-											<p class="goods__location">
-												<span class="goods__city">Город</span>,
-												<span class="goods__district">Район</span>
-											</p>
-											<p class="goods__time">Дата и время</p>
-											<button class="goods__options">
-												<svg class="goods__options-svg">
-													<use
-														xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
-													/>
-												</svg>
-											</button>
-										</article>
-									</a>
-								</li>
-								<li class="goods__item">
-									<a href="" class="goods__link">
-										<article class="goods__article">
-											<div class="goods__inner-img">
-												<img
-													src="../../static/img/housing.png"
-													alt=""
-													class="goods__img"
-												/>
-											</div>
-											<p class="goods__price">450 €</p>
-											<h3 class="goods__title">Название товара</h3>
-											<p class="goods__location">
-												<span class="goods__city">Город</span>,
-												<span class="goods__district">Район</span>
-											</p>
-											<p class="goods__time">Дата и время</p>
-											<button class="goods__options">
-												<svg class="goods__options-svg">
-													<use
-														xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
-													/>
-												</svg>
-											</button>
-										</article>
-									</a>
-								</li>
-								<li class="goods__item">
-									<a href="" class="goods__link">
-										<article class="goods__article">
-											<div class="goods__inner-img">
-												<img
-													src="../../static/img/housing.png"
-													alt=""
-													class="goods__img"
-												/>
-											</div>
-											<p class="goods__price">450 €</p>
-											<h3 class="goods__title">Название товара</h3>
-											<p class="goods__location">
-												<span class="goods__city">Город</span>,
-												<span class="goods__district">Район</span>
-											</p>
-											<p class="goods__time">Дата и время</p>
-											<button class="goods__options">
-												<svg class="goods__options-svg">
-													<use
-														xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
-													/>
-												</svg>
-											</button>
-										</article>
-									</a>
-								</li>
-								<li class="goods__item">
-									<a href="" class="goods__link">
-										<article class="goods__article">
-											<div class="goods__inner-img">
-												<img
-													src="../../static/img/housing.png"
-													alt=""
-													class="goods__img"
-												/>
-											</div>
-											<p class="goods__price">450 €</p>
-											<h3 class="goods__title">Название товара</h3>
-											<p class="goods__location">
-												<span class="goods__city">Город</span>,
-												<span class="goods__district">Район</span>
-											</p>
-											<p class="goods__time">Дата и время</p>
-											<button class="goods__options">
-												<svg class="goods__options-svg">
-													<use
-														xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
-													/>
-												</svg>
-											</button>
-										</article>
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="products__advertisement-inner ad">
-							<ul class="ad__list" arai-label="advertisement">
-								<li class="ad__item">
-									<a class="ad__link" href="#!" aria-label="advertisement">
-										<img src="#!" alt="img yours ad" class="ad__image" />
-										<p class="ad__desc">здесь может быть ваша реклама</p>
-									</a>
-								</li>
-
-								<li class="ad__item">
-									<a class="ad__link" href="#!" aria-label="advertisement">
-										<img src="#!" alt="img yours ad" class="ad__image" />
-										<p class="ad__desc">
-											здесь может быть ваша реклама с огромным колличеством
-											контента: Lorem ipsum dolor, sit amet consectetur
-											adipisicing elit. Excepturi totam, iusto minus fuga
-											aliquid consequatur esse nostrum vitae harum natus rem
-											numquam omnis autem. Ea velit porro veniam eum, quae
-											voluptatibus magni! Sunt quos quasi consequuntur ad a
-											officiis, doloremque officia, nam dolores est aperiam!
-											Voluptatum magni libero soluta consectetur!
-										</p>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+			</div>
+		</div>
+	</section>
+</main>
 {% endblock main %}

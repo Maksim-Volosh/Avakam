@@ -123,12 +123,19 @@
 }
 
 .goods__options {
+	position: absolute;
+	top: -21px;
+	right: -8px;
+	z-index: 100;
+	width: 40px;
+	height: 21px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .goods__options-svg {
-	position: absolute;
-	top: -11px;
-	right: 0;
+	display: block;
 	width: 23px;
 	height: 5px;
 }
