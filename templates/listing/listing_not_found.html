@@ -1,24 +1,22 @@
 {% extends "base.html" %} 
 {% load static %} 
 
-{% block title %}Avakam{% endblock title %} {% block links %}
-<link rel="stylesheet" href="{% static 'css/vars/swiper-bundle.min.css' %}" />
+{% block title %}Avakam - not founded{% endblock title %} 
 
-<link rel="stylesheet" href="{% static 'css/index/advertisement.css' %}" />
-<link rel="stylesheet" href="{% static 'css/index/categories.css' %}" />
-<link rel="stylesheet" href="{% static 'css/index/products.css' %}" />
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/listing/listing_not_found.css' %}" />
 {% endblock links %} 
 
 {% block js %}
-<script
-	src="{% static 'js/vars/swiper-bundle.min.js' %}"
-	defer
-></script>
-<script src="{% static 'js/index.js' %}" defer></script>
 {% endblock js %} 
 
 {% block main %}
 <main class="main">
-	<h1 class="">we happy welcome yours on the our site</h1>
+	<div class="not-found__inner">
+		<h1 class="not-found__title">Объявления не были найдены :(</h1>
+		<p class="not-found__desc">
+			К сожалению, по вашему запросу ничего не было найдено, попробуйте преформулировать запрос
+		</p>
+	</div>
 </main>
 {% endblock main %}
