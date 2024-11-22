@@ -8,6 +8,15 @@
 }
 
 @font-face {
+	font-family: 'TTTravels-Medium';
+	src: url('../fonts/TTTravels-Regular.woff2') format('woff2'),
+		url('../fonts/TTTravels-Regular.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
 	font-family: 'TTTravels-Regular';
 	src: url('../fonts/TTTravels-Regular.woff2') format('woff2'),
 		url('../fonts/TTTravels-Regular.woff') format('woff');

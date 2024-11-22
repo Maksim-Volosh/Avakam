@@ -8,9 +8,16 @@
 
 .products__recommendation-inner {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 	gap: 20px;
 	margin-bottom: 45px;
+}
+
+.products__recommendation-title {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: -15px;
 }
 
 .products__recommendation-desc {
@@ -22,7 +29,7 @@
 	display: flex;
 	width: 140px;
 	align-items: center;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	gap: 20px;
 }
 
@@ -35,6 +42,17 @@
 	width: 30px;
 	height: 30px;
 	line-height: 0;
+}
+
+.products__recommendation-info {
+	width: 100%;
+	font-family: var(--TTTravels-Medium);
+	font-size: 28px;
+	color: var(--color-black);
+}
+
+.products__recommendation-count {
+	color: var(--color-green);
 }
 
 .products__inner {
@@ -136,7 +154,6 @@
 .goods__favorite:hover {
 	color: red;
 }
-
 
 .goods__favorite-svg {
 	width: 20px;

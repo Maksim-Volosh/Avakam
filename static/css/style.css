@@ -13,6 +13,7 @@ html {
 :root {
 	/* ! Fonts */
 	--TTTravels-DB: 'TTTravels-Demibold', sans-serif;
+	--TTTravels-Medium: 'TTTravels-Medium', sans-serif;
 	--TTTravels-Regular: 'TTTravels-Regular', sans-serif;
 	--TTTravels-Light: 'TTTravels-Light', sans-serif;
 
