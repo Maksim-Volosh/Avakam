@@ -32,42 +32,16 @@
 
 					<form class="header__form">
 						<input class="header__form-input" type="text" placeholder="Найти" />
-						<div class="header__form-btns">
-							<button
-								id="js-main-search-products"
-								class="header__form-btn"
-								type="button"
-								aria-label="seach"
-							>
-								<svg class="header__form-btn-search">
-									<use
-										xlink:href="{% static 'img/sprite.svg' %}#search-icon"
-									/>
-								</svg>
-							</button>
-							<button
-								class="header__form-btn"
-								type="button"
-								aria-label="location"
-							>
-								<svg class="header__form-btn-location">
-									<use
-										xlink:href="{% static 'img/sprite.svg' %}#location-icon"
-									/>
-								</svg>
-							</button>
-							<button
-								class="header__form-btn"
-								type="button"
-								aria-label="filter"
-							>
-								<svg class="header__form-btn-filter">
-									<use
-										xlink:href="{% static 'img/sprite.svg' %}#filter-icon"
-									/>
-								</svg>
-							</button>
-						</div>
+						<button
+							id="js-main-search-products"
+							class="header__form-btn header__form-btn_search"
+							type="button"
+							aria-label="seach"
+						>
+							<svg class="header__form-btn-search">
+								<use xlink:href="{% static 'img/sprite.svg' %}#search-icon" />
+							</svg>
+						</button>
 					</form>
 
 					<div class="header__login-buttons">
@@ -86,33 +60,32 @@
 					</div>
 
 					<div class="header__actions">
+						<button class="header__action" aria-label="location">
+							<svg class="header__action-location">
+								<use xlink:href="{% static 'img/sprite.svg' %}#location-icon" />
+							</svg>
+						</button>
 						<a class="header__action" href="#" aria-label="favorite products">
 							<svg class="header__action-favorite">
-								<use
-									xlink:href="{% static 'img/sprite.svg' %}#favorite-icon"
-								/>
+								<use xlink:href="{% static 'img/sprite.svg' %}#favorite-icon" />
 							</svg>
 						</a>
+						{% comment %}
 						<a class="header__action" href="#" aria-label="chat with seller">
 							<svg class="header__action-chat">
-								<use
-									xlink:href="{% static 'img/sprite.svg' %}#chat-icon"
-								/>
+								<use xlink:href="{% static 'img/sprite.svg' %}#chat-icon" />
 							</svg>
 						</a>
+						{% endcomment %}
 						<button
 							class="header__action"
 							aria-label="change color theme of the website"
 						>
 							<svg class="header__action-reverse reverse-active">
-								<use
-									xlink:href="{% static 'img/sprite.svg' %}#moon-icon"
-								/>
+								<use xlink:href="{% static 'img/sprite.svg' %}#moon-icon" />
 							</svg>
 							<svg class="header__action-reverse">
-								<use
-									xlink:href="{% static 'img/sprite.svg' %}#sun-icon"
-								/>
+								<use xlink:href="{% static 'img/sprite.svg' %}#sun-icon" />
 							</svg>
 						</button>
 						<button
@@ -285,9 +258,7 @@
 								target="_blank"
 							>
 								<svg class="contacts__svg">
-									<use
-										xlink:href="{% static 'img/sprite.svg' %}#mail-icon"
-									/>
+									<use xlink:href="{% static 'img/sprite.svg' %}#mail-icon" />
 								</svg>
 								SellPlace@gmail.com
 							</a>
@@ -300,9 +271,7 @@
 								target="_blank"
 							>
 								<svg class="contacts__svg">
-									<use
-										xlink:href="{% static 'img/sprite.svg' %}#phone-icon"
-									/>
+									<use xlink:href="{% static 'img/sprite.svg' %}#phone-icon" />
 								</svg>
 								+375403993028
 							</a>

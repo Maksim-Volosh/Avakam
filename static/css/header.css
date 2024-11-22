@@ -12,8 +12,8 @@
 }
 
 .header__logo {
-	width: 139px;
-	height: 87px;
+	width: 142px;
+	height: 90px;
 	flex-shrink: 0;
 }
 
@@ -21,42 +21,28 @@
 	position: relative;
 	width: 100%;
 	max-width: 630px;
+	height: 58px;
 }
 
 .header__form-input {
 	width: 100%;
-	padding: 8px;
-	padding-right: 110px;
+	height: inherit;
+	padding: 5px 45px 5px;
+	padding-right: 150px;
 	border: 3px solid var(--color-green);
 	border-radius: 12px;
 }
 
-.header__form-btns {
+.header__form-btn {
 	position: absolute;
-	right: 15px;
+	right: 45px;
 	top: 50%;
 	transform: translateY(-50%);
-	display: flex;
-	align-items: center;
-	gap: 15px;
 }
 
-.header__form-btn {
-}
-
-.header__form-btn-search {
-	width: 21px;
-	height: 20px;
-}
-
-.header__form-btn-location {
-	width: 25px;
-	height: 20px;
-}
-
-.header__form-btn-filter {
-	width: 23px;
-	height: 20px;
+.header__form-btn_search {
+	width: 24px;
+	height: 24px;
 }
 
 .header__login-buttons {
@@ -96,11 +82,12 @@
 	flex-shrink: 0;
 }
 
+.header__action-location,
 .header__action-favorite,
 .header__action-chat,
 .header__action-reverse {
-	width: 20px;
-	height: 20px;
+	width: 24px;
+	height: 24px;
 }
 
 .header__action-reverse {
