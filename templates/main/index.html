@@ -1,20 +1,25 @@
 {% extends "base.html" %} 
 {% load static %} 
 {% block title %}Avakam{% endblock title %}
-{% block links %}
 
+
+{% block links %}
 <link rel="stylesheet" href="{% static 'css/vars/swiper-bundle.min.css' %}" />
 
 <link rel="stylesheet" href="{% static 'css/index/advertisement.css' %}" />
 <link rel="stylesheet" href="{% static 'css/index/categories.css' %}" />
 <link rel="stylesheet" href="{% static 'css/index/products.css' %}" />
-{% endblock links %} {% block js %}
+{% endblock links %} 
+
+{% block js %}
 <script
 	src="{% static '../../static/js/vars/swiper-bundle.min.js' %}"
 	defer
 ></script>
 <script src="{% static '../../static/js/index.js' %}" defer></script>
-{% endblock js %} {% block main %}
+{% endblock js %} 
+
+{% block main %}
 <main class="main">
 	<h1 class="visually-hidden">we happy welcome yours on the our site</h1>
 	<section class="advertisement">
@@ -328,8 +333,11 @@
 		<div class="container products__container">
 			<h2 class="visually-hidden">products of our site</h2>
 			<div class="products__recommendation-inner">
-				<p class="products__recommendation-desc">Рекомендации для вас</p>
+				<p class="products__recommendation-desc">Все объявления в 
+					<span>Турции</span>
+				</p>
 				<div class="products__recommendation-actions">
+					{% comment %} 
 					<button class="products__recommendation-action" aria-label="location">
 						<svg class="products__recommendation-action-location">
 							<use
@@ -343,7 +351,8 @@
 								xlink:href="{% static '../../static/img/sprite.svg' %}#filter-icon"
 							/>
 						</svg>
-					</button>
+					</button> 
+					{% endcomment %}
 					<button class="products__recommendation-action" aria-label="sort">
 						<svg class="products__recommendation-action-sort">
 							<use
@@ -367,14 +376,52 @@
 											class="goods__img"
 										/>
 									</div>
-									<p class="goods__price">450 €</p>
-									<h3 class="goods__title">Название товара</h3>
-									<p class="goods__location">
-										<span class="goods__city">Город</span>,
-										<span class="goods__district">Район</span>
-									</p>
-									<p class="goods__time">Дата и время</p>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
 								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
+									</svg>
+								</button>
+								<button class="goods__options">
+									<svg class="goods__options-svg">
+										<use
+											xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
+										/>
+									</svg>
+								</button>
+							</article>
+						</li>
+						
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="../../static/img/housing.png"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
+									</svg>
+								</button>
 								<button class="goods__options">
 									<svg class="goods__options-svg">
 										<use
@@ -394,14 +441,19 @@
 											class="goods__img"
 										/>
 									</div>
-									<p class="goods__price">450 €</p>
-									<h3 class="goods__title">Название товара</h3>
-									<p class="goods__location">
-										<span class="goods__city">Город</span>,
-										<span class="goods__district">Район</span>
-									</p>
-									<p class="goods__time">Дата и время</p>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
 								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
+									</svg>
+								</button>
 								<button class="goods__options">
 									<svg class="goods__options-svg">
 										<use
@@ -421,14 +473,19 @@
 											class="goods__img"
 										/>
 									</div>
-									<p class="goods__price">450 €</p>
-									<h3 class="goods__title">Название товара</h3>
-									<p class="goods__location">
-										<span class="goods__city">Город</span>,
-										<span class="goods__district">Район</span>
-									</p>
-									<p class="goods__time">Дата и время</p>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
 								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
+									</svg>
+								</button>
 								<button class="goods__options">
 									<svg class="goods__options-svg">
 										<use
@@ -448,14 +505,19 @@
 											class="goods__img"
 										/>
 									</div>
-									<p class="goods__price">450 €</p>
-									<h3 class="goods__title">Название товара</h3>
-									<p class="goods__location">
-										<span class="goods__city">Город</span>,
-										<span class="goods__district">Район</span>
-									</p>
-									<p class="goods__time">Дата и время</p>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
 								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
+									</svg>
+								</button>
 								<button class="goods__options">
 									<svg class="goods__options-svg">
 										<use
@@ -475,14 +537,83 @@
 											class="goods__img"
 										/>
 									</div>
-									<p class="goods__price">450 €</p>
-									<h3 class="goods__title">Название товара</h3>
-									<p class="goods__location">
-										<span class="goods__city">Город</span>,
-										<span class="goods__district">Район</span>
-									</p>
-									<p class="goods__time">Дата и время</p>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
 								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
+									</svg>
+								</button>
+								<button class="goods__options">
+									<svg class="goods__options-svg">
+										<use
+											xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
+										/>
+									</svg>
+								</button>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="../../static/img/housing.png"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
+									</svg>
+								</button>
+								<button class="goods__options">
+									<svg class="goods__options-svg">
+										<use
+											xlink:href="{% static '../../static/img/sprite.svg' %}#options-icon"
+										/>
+									</svg>
+								</button>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="../../static/img/housing.png"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
+									</svg>
+								</button>
 								<button class="goods__options">
 									<svg class="goods__options-svg">
 										<use
@@ -507,16 +638,7 @@
 						<li class="ad__item">
 							<a class="ad__link" href="#!" aria-label="advertisement">
 								<img src="#!" alt="img yours ad" class="ad__image" />
-								<p class="ad__desc">
-									здесь может быть ваша реклама с огромным колличеством
-									контента: Lorem ipsum dolor, sit amet consectetur adipisicing
-									elit. Excepturi totam, iusto minus fuga aliquid consequatur
-									esse nostrum vitae harum natus rem numquam omnis autem. Ea
-									velit porro veniam eum, quae voluptatibus magni! Sunt quos
-									quasi consequuntur ad a officiis, doloremque officia, nam
-									dolores est aperiam! Voluptatum magni libero soluta
-									consectetur!
-								</p>
+								<p class="ad__desc">здесь может быть ваша реклама</p>
 							</a>
 						</li>
 					</ul>

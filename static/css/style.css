@@ -97,8 +97,8 @@ input[type='number']:focus {
 }
 
 .container {
-	max-width: 1540px;
-	padding: 0 50px;
+	max-width: 1440px;
+	padding: 0 65px;
 	margin: 0 auto;
 }
 
