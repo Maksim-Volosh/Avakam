@@ -3,6 +3,7 @@
 }
 
 .products__container {
+	max-width: 1560px;
 	padding: 0 10px;
 }
 
