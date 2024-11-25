@@ -136,12 +136,40 @@
 								/>
 							</svg>
 						</button> 
-						<button class="products__recommendation-action" aria-label="sort">
-							<svg class="products__recommendation-action-sort">
-								<use
-									xlink:href="{% static 'img/sprite.svg' %}#sort-icon"/>
-							</svg>
-						</button>
+						<div class="products__recommendation-sort-inner">
+							<button 
+								id="js-products-sort" class="products__recommendation-action" 
+								aria-label="sort"
+							>
+								<svg class="products__recommendation-action-sort">
+									<use
+										xlink:href="{% static 'img/sprite.svg' %}#sort-icon"
+									/>
+								</svg>
+							</button>
+
+							<div id="js-popup-sort" class="popup popup__sort">
+									<div id="js-popup-sort-content" class="popup__content">
+										<ul class="popup__list">
+											<li class="popup__item">
+												<button class="popup__sort-btn">
+													По новизне
+												</button>
+											</li>
+											<li class="popup__item">
+												<button class="popup__sort-btn">
+													Сначала дешевле
+												</button>
+											</li>
+											<li class="popup__item">
+												<button class="popup__sort-btn">
+													Сначала дороже
+												</button>
+											</li>
+										</ul>
+									</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				

@@ -13,10 +13,10 @@
 
 {% block js %}
 <script
-	src="{% static '../../static/js/vars/swiper-bundle.min.js' %}"
+	src="{% static 'js/vars/swiper-bundle.min.js' %}"
 	defer
 ></script>
-<script src="{% static '../../static/js/index.js' %}" defer></script>
+<script src="{% static 'js/index.js' %}" defer></script>
 {% endblock js %} 
 
 {% block main %}
@@ -349,13 +349,40 @@
 							</svg>
 						</button> 
 						{% endcomment %}
-						<button class="products__recommendation-action" aria-label="sort">
-							<svg class="products__recommendation-action-sort">
-								<use
-									xlink:href="{% static '../../static/img/sprite.svg' %}#sort-icon"
-								/>
-							</svg>
-						</button>
+						<div class="products__recommendation-sort-inner">
+							<button 
+								id="js-products-sort" class="products__recommendation-action" 
+								aria-label="sort"
+							>
+								<svg class="products__recommendation-action-sort">
+									<use
+										xlink:href="{% static 'img/sprite.svg' %}#sort-icon"
+									/>
+								</svg>
+							</button>
+
+							<div id="js-popup-sort" class="popup popup__sort">
+									<div id="js-popup-sort-content" class="popup__content">
+										<ul class="popup__list">
+											<li class="popup__item">
+												<button class="popup__sort-btn">
+													По новизне
+												</button>
+											</li>
+											<li class="popup__item">
+												<button class="popup__sort-btn">
+													Сначала дешевле
+												</button>
+											</li>
+											<li class="popup__item">
+												<button class="popup__sort-btn">
+													Сначала дороже
+												</button>
+											</li>
+										</ul>
+									</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

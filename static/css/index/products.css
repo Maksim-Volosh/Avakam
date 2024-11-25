@@ -45,6 +45,11 @@
 	line-height: 0;
 }
 
+/* ! popups inners */
+.products__recommendation-sort-inner {
+	position: relative;
+}
+
 .products__recommendation-info {
 	width: 100%;
 	font-family: var(--TTTravels-Medium);
