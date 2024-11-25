@@ -19,24 +19,24 @@ const adSwiperMainOptions = {
 
 const swiperAdMainPage = new Swiper(adSwiperMainPageNode, adSwiperMainOptions);
 
-//! popups
+//! dropdowns
 const sortProductNode = document.getElementById('js-products-sort'),
-	popupSortProductNode = document.getElementById('js-popup-sort'),
-	popupItemSortProductNode = document.querySelectorAll('.popup__sort-btn');
+	dropdownSortProductNode = document.getElementById('js-dropdown-sort'),
+	dropdownItemSortProductNode = document.querySelectorAll('.dropdown__sort-btn');
 
 //! sort
-const handleSortPopupOpen = () => {
-	popupSortProductNode.classList.add('popup_open');
+const handleSortDropdownOpen = () => {
+	dropdownSortProductNode.classList.add('dropdown_open');
 };
-const handleSortPopupClose = () => {
-	popupSortProductNode.classList.remove('popup_open');
+const handleSortDropdownClose = () => {
+	dropdownSortProductNode.classList.remove('dropdown_open');
 };
 sortProductNode.addEventListener('click', event => {
 	event.stopPropagation();
 
-	popupSortProductNode.classList.add('popup_open');
+	dropdownSortProductNode.classList.add('dropdown_open');
 });
-window.addEventListener('click', handleSortPopupClose);
-popupItemSortProductNode.forEach(item => {
-	item.addEventListener('click', handleSortPopupClose);
+window.addEventListener('click', handleSortDropdownClose);
+dropdownItemSortProductNode.forEach(item => {
+	item.addEventListener('click', handleSortDropdownClose);
 });

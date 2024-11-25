@@ -1,4 +1,4 @@
-.popup {
+.dropdown {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -11,23 +11,23 @@
 	z-index: 1000;
 }
 
-.popup_open {
+.dropdown_open {
 	visibility: visible;
 	opacity: 1;
 }
 
-.popup__list {
+.dropdown__list {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
 	width: 200px;
 }
 
-.popup__item {
+.dropdown__item {
 	font-weight: 600;
 	font-size: 20px;
 	color: var(--color-black);
 }
 
-.popup__sort-btn {
+.dropdown__sort-btn {
 }
