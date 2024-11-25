@@ -20,23 +20,41 @@ const adSwiperMainOptions = {
 const swiperAdMainPage = new Swiper(adSwiperMainPageNode, adSwiperMainOptions);
 
 //! dropdowns
-const sortProductNode = document.getElementById('js-products-sort'),
-	dropdownSortProductNode = document.getElementById('js-dropdown-sort'),
-	dropdownItemSortProductNode = document.querySelectorAll('.dropdown__sort-btn');
-
-//! sort
-const handleSortDropdownOpen = () => {
-	dropdownSortProductNode.classList.add('dropdown_open');
+//! func
+const handleDropdownOpen = (event, dropdownNode) => {
+	event.stopPropagation();
+	dropdownNode.classList.add('dropdown_open');
 };
 const handleSortDropdownClose = () => {
 	dropdownSortProductNode.classList.remove('dropdown_open');
 };
-sortProductNode.addEventListener('click', event => {
-	event.stopPropagation();
+const handleLocationDropdownClose = () => {
+	dropdownLocationProductNode.classList.remove('dropdown_open');
+};
 
-	dropdownSortProductNode.classList.add('dropdown_open');
+//! sort
+const sortProductNode = document.getElementById('js-products-sort'),
+	dropdownSortProductNode = document.getElementById('js-dropdown-sort'),
+	dropdownItemSortProductNode = document.querySelectorAll('.dropdown_sort-btn');
+
+sortProductNode.addEventListener('click', event => {
+	handleDropdownOpen(event, dropdownSortProductNode);
 });
-window.addEventListener('click', handleSortDropdownClose);
 dropdownItemSortProductNode.forEach(item => {
 	item.addEventListener('click', handleSortDropdownClose);
 });
+
+//! location
+const locationProductNode = document.getElementById('js-products-location'),
+	dropdownLocationProductNode = document.getElementById('js-dropdown-location'),
+	locationSelectDistrict = document.getElementById('js-location-select-district');
+
+locationProductNode.addEventListener('click', event => {
+	handleDropdownOpen(event, dropdownLocationProductNode);
+});
+
+//! close dropdown
+// window.addEventListener('click', handleSortDropdownClose);
+// window.addEventListener('click', handleLocationDropdownClose);
+
+const districtChoices = new Choices(locationSelectDistrict)

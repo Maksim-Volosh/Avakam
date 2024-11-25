@@ -104,6 +104,11 @@
 	text-transform: lowercase;
 }
 
+/* ! dropdown */
+.header__action-location-inner {
+	position: relative;
+}
+
 .header__navigation-list {
 	gap: 20px;
 }

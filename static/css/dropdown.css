@@ -1,7 +1,6 @@
 .dropdown {
 	position: absolute;
 	top: 0;
-	left: 0;
 	padding: 48px 59px;
 	background-color: var(--background-white);
 	border: 2px solid #d9d9d9;
@@ -9,6 +8,14 @@
 	visibility: hidden;
 	opacity: 0;
 	z-index: 1000;
+}
+
+.dropdown_sort {
+	left: 0;
+}
+
+.dropdown_location {
+	right: 0;
 }
 
 .dropdown_open {
@@ -29,5 +36,5 @@
 	color: var(--color-black);
 }
 
-.dropdown__sort-btn {
+.dropdown_sort-btn {
 }
