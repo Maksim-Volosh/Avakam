@@ -58,12 +58,12 @@
 
 .products__inner {
 	display: grid;
-	grid-template-columns: repeat(4, 3fr);
+	grid-template-columns: repeat(2, 1fr) 444px;
 	gap: 30px;
 }
 
 .products__goods-inner {
-	grid-column: 1 / 4;
+	grid-column: 1 / 3;
 }
 
 /* ! GOODS */
@@ -191,7 +191,7 @@
 .ad__list {
 	display: flex;
 	flex-direction: column;
-	gap: 97px;
+	gap: 120px;
 }
 
 .ad__item {
