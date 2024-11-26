@@ -9,7 +9,6 @@
 
 		<title>{% block title %}{% endblock title %}</title>
 
-		<link rel="stylesheet" href="{% static 'css/vars/choices-base.min.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/vars/choices.min.css' %}" />
 
 		<link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
@@ -67,31 +66,67 @@
 
 					<div class="header__actions">
 						<div class="header__action-location-inner">
-							<button id="js-products-location" class="header__action" aria-label="location">
+							<button
+								id="js-products-location"
+								class="header__action"
+								aria-label="location"
+							>
 								<svg class="header__action-location">
-									<use xlink:href="{% static 'img/sprite.svg' %}#location-icon" />
+									<use
+										xlink:href="{% static 'img/sprite.svg' %}#location-icon"
+									/>
 								</svg>
 							</button>
 
 							<div id="js-dropdown-location" class="dropdown dropdown_location">
 								<ul class="dropdown__list">
 									<li class="dropdown__item">
-										<select name="" id="js-location-select-district" class="dropdown__select">
-											<option hidden disabled selected  value="district" class="dropdown__option">Район</option>
-											<option value="средиземноморский регион" class="dropdown__option">
+										<select
+											name=""
+											id="js-location-select-district"
+											class="dropdown__select"
+										>
+											<option
+												hidden
+												disabled
+												selected
+												value="district"
+												class="dropdown__option"
+											>
+												Район
+											</option>
+											<option
+												value="средиземноморский регион"
+												class="dropdown__option"
+											>
 												Средиземноморский регион
 											</option>
 											<option value="Эгейский регион" class="dropdown__option">
 												Эгейский регион
 											</option>
-											<option value="Черноморский регион" class="dropdown__option">
+											<option
+												value="Черноморский регион"
+												class="dropdown__option"
+											>
 												Черноморский регион
 											</option>
 										</select>
 									</li>
 									<li class="dropdown__item">
-										<select name="" id="js-location-select-city" class="dropdown__select">
-											<option hidden disabled selected value="city" class="dropdown__option">Город</option>
+										<select
+											name=""
+											id="js-location-select-city"
+											class="dropdown__select"
+										>
+											<option
+												hidden
+												disabled
+												selected
+												value="city"
+												class="dropdown__option"
+											>
+												Город
+											</option>
 											<option value="Алания" class="dropdown__option">
 												Алания
 											</option>
@@ -104,7 +139,7 @@
 										</select>
 									</li>
 								</ul>
-						</div> 
+							</div>
 						</div>
 						<a class="header__action" href="#" aria-label="favorite products">
 							<svg class="header__action-favorite">

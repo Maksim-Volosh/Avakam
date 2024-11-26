@@ -47,7 +47,10 @@ dropdownItemSortProductNode.forEach(item => {
 //! location
 const locationProductNode = document.getElementById('js-products-location'),
 	dropdownLocationProductNode = document.getElementById('js-dropdown-location'),
-	locationSelectDistrict = document.getElementById('js-location-select-district');
+	locationSelectDistrict = document.getElementById(
+		'js-location-select-district'
+	),
+	locationSelectCity = document.getElementById('js-location-select-city');
 
 locationProductNode.addEventListener('click', event => {
 	handleDropdownOpen(event, dropdownLocationProductNode);
@@ -57,4 +60,16 @@ locationProductNode.addEventListener('click', event => {
 // window.addEventListener('click', handleSortDropdownClose);
 // window.addEventListener('click', handleLocationDropdownClose);
 
-const districtChoices = new Choices(locationSelectDistrict)
+const choicesSelectOptions = {
+	searchEnabled: false,
+	shouldSortItems: false,
+	itemSelectText: '',
+	shouldSort: false,
+	placeholder: false,
+};
+
+const districtChoices = new Choices(
+		locationSelectDistrict,
+		choicesSelectOptions
+	),
+	cityChoices = new Choices(locationSelectCity, choicesSelectOptions);
