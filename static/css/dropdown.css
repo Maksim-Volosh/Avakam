@@ -100,6 +100,7 @@
 .choices__list--dropdown,
 .choices__list[aria-expanded] {
 	border: 2px solid var(--color-black);
+	border-radius: 0 0 6px 6px;
 	word-break: normal;
 }
 
