@@ -47,13 +47,11 @@
 	color: var(--color-black);
 }
 
-.dropdown__item {
+.dropdown_sort-btn {
 	font-weight: 600;
 	font-size: 20px;
 	color: var(--color-black);
-}
-
-.dropdown_sort-btn {
+	text-align: start;
 }
 
 /* ! locations select */
