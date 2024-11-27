@@ -73,13 +73,13 @@
 	display: flex;
 	align-items: center;
 	gap: 35px;
+	flex-shrink: 0;
 }
 
 .header__action {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-shrink: 0;
 }
 
 .header__action-location,
