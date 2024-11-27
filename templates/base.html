@@ -79,8 +79,9 @@
 							</button>
 
 							<div id="js-dropdown-location" class="dropdown dropdown_location">
-								<ul class="dropdown__list">
-									<li class="dropdown__item">
+								<form action="" class="dropdown__form">
+									<legend class="dropdown__title">Ваш регион</legend>
+									<fieldset class="dropdown__fieldset">
 										<select
 											name=""
 											id="js-location-select-district"
@@ -111,8 +112,8 @@
 												Черноморский регион
 											</option>
 										</select>
-									</li>
-									<li class="dropdown__item">
+									</fieldset>
+									<fieldset class="dropdown__fieldset">
 										<select
 											name=""
 											id="js-location-select-city"
@@ -137,8 +138,9 @@
 												Бодрум
 											</option>
 										</select>
-									</li>
-								</ul>
+									</fieldset>
+									<button class="dropdown__submit">применить</button>
+								</form>
 							</div>
 						</div>
 						<a class="header__action" href="#" aria-label="favorite products">

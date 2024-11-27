@@ -21,15 +21,16 @@ const swiperAdMainPage = new Swiper(adSwiperMainPageNode, adSwiperMainOptions);
 
 //! dropdowns
 //! func
-const handleDropdownOpen = (event, dropdownNode) => {
-	event.stopPropagation();
+const handleDropdownOpen = dropdownNode => {
 	dropdownNode.classList.add('dropdown_open');
 };
-const handleSortDropdownClose = () => {
-	dropdownSortProductNode.classList.remove('dropdown_open');
-};
-const handleLocationDropdownClose = () => {
-	dropdownLocationProductNode.classList.remove('dropdown_open');
+const handleDropdownClose = (event, dropdownNode, dropdownBtnNode) => {
+	if (
+		!dropdownNode.contains(event.target) &&
+		!dropdownBtnNode.contains(event.target)
+	) {
+		dropdownNode.classList.remove('dropdown_open');
+	}
 };
 
 //! sort
@@ -37,11 +38,13 @@ const sortProductNode = document.getElementById('js-products-sort'),
 	dropdownSortProductNode = document.getElementById('js-dropdown-sort'),
 	dropdownItemSortProductNode = document.querySelectorAll('.dropdown_sort-btn');
 
-sortProductNode.addEventListener('click', event => {
-	handleDropdownOpen(event, dropdownSortProductNode);
+sortProductNode.addEventListener('click', () => {
+	handleDropdownOpen(dropdownSortProductNode);
 });
 dropdownItemSortProductNode.forEach(item => {
-	item.addEventListener('click', handleSortDropdownClose);
+	item.addEventListener('click', () => {
+		dropdownSortProductNode.classList.remove('dropdown_open');
+	});
 });
 
 //! location
@@ -52,13 +55,24 @@ const locationProductNode = document.getElementById('js-products-location'),
 	),
 	locationSelectCity = document.getElementById('js-location-select-city');
 
-locationProductNode.addEventListener('click', event => {
-	handleDropdownOpen(event, dropdownLocationProductNode);
+locationProductNode.addEventListener('click', () => {
+	handleDropdownOpen(dropdownLocationProductNode);
 });
 
 //! close dropdown
-// window.addEventListener('click', handleSortDropdownClose);
-// window.addEventListener('click', handleLocationDropdownClose);
+document.addEventListener('click', event => {
+	if (dropdownSortProductNode.classList.contains('dropdown_open')) {
+		handleDropdownClose(event, dropdownSortProductNode, sortProductNode);
+	}
+
+	if (dropdownLocationProductNode.classList.contains('dropdown_open')) {
+		handleDropdownClose(
+			event,
+			dropdownLocationProductNode,
+			locationProductNode
+		);
+	}
+});
 
 const choicesSelectOptions = {
 	searchEnabled: false,
