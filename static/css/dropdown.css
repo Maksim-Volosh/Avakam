@@ -43,6 +43,10 @@
 	gap: 20px;
 }
 
+.dropdown__fieldset_sort {
+	margin-bottom: 0;
+}
+
 .dropdown__title {
 	margin-bottom: 24px;
 	font-family: var(--TTTravels-Demibold);
@@ -118,7 +122,7 @@
 }
 
 .dropdown_sort-btn {
-	font-weight: 600;
+	font-family: var(--TTTravels-Demibold);
 	font-size: 20px;
 	color: var(--color-black);
 	text-align: start;

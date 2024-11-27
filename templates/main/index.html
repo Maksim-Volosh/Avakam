@@ -363,15 +363,18 @@
 
 							<div id="js-dropdown-sort" class="dropdown dropdown_sort">
 								<form action="" class="dropdown__form">
-									<button class="dropdown_sort-btn">
-										По новизне
-									</button>
-									<button class="dropdown_sort-btn">
-										Сначала дешевле
-									</button>
-									<button class="dropdown_sort-btn">
-										Сначала дороже
-									</button>
+									<fieldset class="dropdown__fieldset dropdown__fieldset_sort">
+										<legend class="visually-hidden">Сортировка по</legend>
+										<button class="dropdown_sort-btn">
+											По новизне
+										</button>
+										<button class="dropdown_sort-btn">
+											Сначала дешевле
+										</button>
+										<button class="dropdown_sort-btn">
+											Сначала дороже
+										</button>
+									</fieldset>
 								</form>
 							</div>
 						</div>
@@ -536,74 +539,6 @@
 								</a>
 								<button class="goods__favorite">
 									<svg class="goods__favorite-svg">
-										<use xlink:href="{% 'img/sprite.svg' %}#favorite-o-icon" />
-									</svg>
-								</button>
-								<div class="goods__options-inner">
-									<button class="goods__options">
-										<svg class="goods__options-svg">
-											<use
-												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
-											/>
-										</svg>
-									</button>
-								</div>
-							</article>
-						</li>
-						<li class="goods__item">
-							<article class="goods__article">
-								<a href="" class="goods__link">
-									<div class="goods__inner-img">
-										<img
-											src="{% static 'img/housing.png' %}"
-											alt=""
-											class="goods__img"
-										/>
-									</div>
-										<p class="goods__price">450 €</p>
-										<h3 class="goods__title">Название товара</h3>
-										<p class="goods__location">
-											<span class="goods__city">Город</span>,
-											<span class="goods__district">Район</span>
-										</p>
-										<p class="goods__time">Дата и время</p>
-								</a>
-								<button class="goods__favorite">
-									<svg class="goods__favorite-svg">
-										<use xlink:href="{% 'img/sprite.svg' %}#favorite-o-icon" />
-									</svg>
-								</button>
-								<div class="goods__options-inner">
-									<button class="goods__options">
-										<svg class="goods__options-svg">
-											<use
-												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
-											/>
-										</svg>
-									</button>
-								</div>
-							</article>
-						</li>
-						<li class="goods__item">
-							<article class="goods__article">
-								<a href="" class="goods__link">
-									<div class="goods__inner-img">
-										<img
-											src="{% static 'img/housing.png' %}"
-											alt=""
-											class="goods__img"
-										/>
-									</div>
-										<p class="goods__price">450 €</p>
-										<h3 class="goods__title">Название товара</h3>
-										<p class="goods__location">
-											<span class="goods__city">Город</span>,
-											<span class="goods__district">Район</span>
-										</p>
-										<p class="goods__time">Дата и время</p>
-								</a>
-								<button class="goods__favorite">
-									<svg class="goods__favorite-svg">
 										<use xlink:href="{% static 'img/sprite.svg' %}#favorite-o-icon" />
 									</svg>
 								</button>
@@ -808,7 +743,75 @@
 								</a>
 								<button class="goods__favorite">
 									<svg class="goods__favorite-svg">
-										<use xlink:href="{% 'img/sprite.svg' %}#favorite-o-icon" />
+										<use xlink:href="{% static 'img/sprite.svg' %}#favorite-o-icon" />
+									</svg>
+								</button>
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="{% static 'img/housing.png' %}"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static 'img/sprite.svg' %}#favorite-o-icon" />
+									</svg>
+								</button>
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="{% static 'img/housing.png' %}"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static 'img/sprite.svg' %}#favorite-o-icon" />
 									</svg>
 								</button>
 								<div class="goods__options-inner">
