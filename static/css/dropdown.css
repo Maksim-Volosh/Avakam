@@ -127,6 +127,7 @@
 /* ! locations select */
 .choices {
 	width: 200px;
+	margin-bottom: 0;
 }
 
 .choices[data-type*='select-one']::after {
