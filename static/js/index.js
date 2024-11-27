@@ -59,6 +59,14 @@ locationProductNode.addEventListener('click', () => {
 	handleDropdownOpen(dropdownLocationProductNode);
 });
 
+//! options
+const optionsProductNode = document.getElementById('js-products-options'),
+	dropdownOptionsProductNode = document.getElementById('js-dropdown-options');
+
+	optionsProductNode.addEventListener('click', () => {
+		handleDropdownOpen(dropdownOptionsProductNode);
+	});
+
 //! close dropdown
 document.addEventListener('click', event => {
 	if (dropdownSortProductNode.classList.contains('dropdown_open')) {
@@ -72,8 +80,17 @@ document.addEventListener('click', event => {
 			locationProductNode
 		);
 	}
+
+	if (dropdownOptionsProductNode.classList.contains('dropdown_open')) {
+		handleDropdownClose(
+			event,
+			dropdownOptionsProductNode,
+			optionsProductNode
+		);
+	}
 });
 
+//! choices.js
 const choicesSelectOptions = {
 	searchEnabled: false,
 	shouldSortItems: false,

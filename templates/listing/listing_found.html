@@ -196,13 +196,46 @@
 										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
 									</svg>
 								</button>
-								<button class="goods__options">
-									<svg class="goods__options-svg">
-										<use
-											xlink:href="{% static 'img/sprite.svg' %}#options-icon"
-										/>
-									</svg>
-								</button>
+								<div class="goods__options-inner">
+									<button id="js-products-options" class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+
+									<div id="js-dropdown-options" class="dropdown dropdown_options">
+										<form action="" class="dropdown__form">
+											<fieldset class="dropdown__fieldset dropdown__fieldset_options">
+												<legend class="dropdown__title">
+													Пожаловаться
+												</legend>
+												<label for="weapons" class="dropdown__label">
+													<input id="weapons" type="checkbox" class="dropdown__input">
+													Оружие
+												</label>
+												<label for="violence" class="dropdown__label">
+													<input id="violence" type="checkbox" class="dropdown__input">
+													Насилие
+												</label>
+												<label for="adultContent" class="dropdown__label">
+													<input id="adultContent" type="checkbox" class="dropdown__input">
+													18+ контент
+												</label>
+												<label for="fraud" class="dropdown__label">
+													<input id="fraud" type="checkbox" class="dropdown__input">
+													Мошенничество
+												</label>
+												<label for="extremism" class="dropdown__label">
+													<input id="extremism" type="checkbox" class="dropdown__input">
+													Экстремизм
+												</label>
+											</fieldset>
+											<button class="dropdown__submit">отправить</button>
+										</form>
+									</div>
+								</div>
 							</article>
 						</li>
 						
@@ -229,13 +262,15 @@
 										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
 									</svg>
 								</button>
-								<button class="goods__options">
-									<svg class="goods__options-svg">
-										<use
-											xlink:href="{% static 'img/sprite.svg' %}#options-icon"
-										/>
-									</svg>
-								</button>
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
 							</article>
 						</li>
 						<li class="goods__item">
@@ -261,13 +296,15 @@
 										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
 									</svg>
 								</button>
-								<button class="goods__options">
-									<svg class="goods__options-svg">
-										<use
-											xlink:href="{% static 'img/sprite.svg' %}#options-icon"
-										/>
-									</svg>
-								</button>
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
 							</article>
 						</li>
 						<li class="goods__item">
@@ -293,13 +330,15 @@
 										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
 									</svg>
 								</button>
-								<button class="goods__options">
-									<svg class="goods__options-svg">
-										<use
-											xlink:href="{% static 'img/sprite.svg' %}#options-icon"
-										/>
-									</svg>
-								</button>
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
 							</article>
 						</li>
 						<li class="goods__item">
@@ -325,13 +364,15 @@
 										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
 									</svg>
 								</button>
-								<button class="goods__options">
-									<svg class="goods__options-svg">
-										<use
-											xlink:href="{% static 'img/sprite.svg' %}#options-icon"
-										/>
-									</svg>
-								</button>
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
 							</article>
 						</li>
 						<li class="goods__item">
@@ -357,13 +398,15 @@
 										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
 									</svg>
 								</button>
-								<button class="goods__options">
-									<svg class="goods__options-svg">
-										<use
-											xlink:href="{% static 'img/sprite.svg' %}#options-icon"
-										/>
-									</svg>
-								</button>
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
 							</article>
 						</li>
 						<li class="goods__item">
@@ -389,13 +432,15 @@
 										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
 									</svg>
 								</button>
-								<button class="goods__options">
-									<svg class="goods__options-svg">
-										<use
-											xlink:href="{% static 'img/sprite.svg' %}#options-icon"
-										/>
-									</svg>
-								</button>
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
 							</article>
 						</li>
 						<li class="goods__item">
@@ -421,13 +466,151 @@
 										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
 									</svg>
 								</button>
-								<button class="goods__options">
-									<svg class="goods__options-svg">
-										<use
-											xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="../../static/img/housing.png"
+											alt=""
+											class="goods__img"
 										/>
+									</div>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
 									</svg>
 								</button>
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="../../static/img/housing.png"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
+									</svg>
+								</button>
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="../../static/img/housing.png"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
+									</svg>
+								</button>
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
+							</article>
+						</li>
+						<li class="goods__item">
+							<article class="goods__article">
+								<a href="" class="goods__link">
+									<div class="goods__inner-img">
+										<img
+											src="../../static/img/housing.png"
+											alt=""
+											class="goods__img"
+										/>
+									</div>
+										<p class="goods__price">450 €</p>
+										<h3 class="goods__title">Название товара</h3>
+										<p class="goods__location">
+											<span class="goods__city">Город</span>,
+											<span class="goods__district">Район</span>
+										</p>
+										<p class="goods__time">Дата и время</p>
+								</a>
+								<button class="goods__favorite">
+									<svg class="goods__favorite-svg">
+										<use xlink:href="{% static "img/sprite.svg" %}#favorite-o-icon" />
+									</svg>
+								</button>
+								<div class="goods__options-inner">
+									<button class="goods__options">
+										<svg class="goods__options-svg">
+											<use
+												xlink:href="{% static 'img/sprite.svg' %}#options-icon"
+											/>
+										</svg>
+									</button>
+								</div>
 							</article>
 						</li>
 					</ul>

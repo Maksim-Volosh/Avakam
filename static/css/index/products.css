@@ -149,7 +149,6 @@
 	position: absolute;
 	bottom: 67px;
 	right: -6px;
-	z-index: 100;
 	width: 30px;
 	height: 30px;
 	display: flex;
@@ -165,17 +164,20 @@
 	height: 20px;
 }
 
-.goods__options {
+.goods__options-inner {
 	position: absolute;
 	top: -21px;
 	right: -8px;
-	z-index: 100;
 	width: 40px;
 	height: 21px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+
+.goods__options {
+}
+
 .goods__options:hover {
 	color: red;
 }
@@ -195,7 +197,7 @@
 .ad__list {
 	display: flex;
 	flex-direction: column;
-	gap: 90px;
+	gap: 84px;
 }
 
 .ad__item {
