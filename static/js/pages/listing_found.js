@@ -1,4 +1,5 @@
 import {
+	dropdownFilterController,
 	dropdownLocationController,
 	dropdownOptionsController,
 	dropdownSortController,
@@ -18,6 +19,28 @@ createSwiper(adSwiperMainPageNode);
 dropdownSortController();
 dropdownLocationController();
 dropdownOptionsController();
+dropdownFilterController();
+
+const filterForm = document.querySelector('.dropdown__form_filter');
+const filterCategoryBtnNode = document.querySelectorAll(
+	'.filter__category-btn'
+);
+
+filterCategoryBtnNode.forEach(btnNode => {
+	btnNode.addEventListener('click', () => {
+		const nextElement = btnNode.nextElementSibling;
+
+		if (nextElement) {
+			if (nextElement.classList.contains('subcategory_open')) {
+				btnNode.classList.remove('subcategory_open');
+				nextElement.classList.remove('subcategory_open');
+			} else {
+				btnNode.classList.add('subcategory_open');
+				nextElement.classList.add('subcategory_open');
+			}
+		}
+	});
+});
 
 // choices.js(selects)
 createChoices(locationSelectDistrict);

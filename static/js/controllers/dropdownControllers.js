@@ -4,6 +4,8 @@ const SORT_BTN_CLASS_NAME = 'js-products-sort',
 	LOCATION_DROPDOWN_CLASS_NAME = 'js-dropdown-location',
 	OPTIONS_BTN_CLASS_NAME = 'js-products-options',
 	OPTIONS_DROPDOWN_CLASS_NAME = 'js-dropdown-options',
+	FILTER_BTN_CLASS_NAME = 'js-products-filter',
+	FILTER_DROPDOWN_CLASS_NAME = 'js-dropdown-filter',
 	DROPDOWN_OPEN_CLASS_NAME = 'dropdown_open';
 
 //! handlers
@@ -68,5 +70,21 @@ export const dropdownOptionsController = () => {
 
 	document.addEventListener('click', event => {
 		handleDropdownClose(event, dropdownOptionsProductNode, optionsProductNode);
+	});
+};
+
+//! options
+export const dropdownFilterController = () => {
+	const filterProductNode = document.getElementById(FILTER_BTN_CLASS_NAME),
+		dropdownFilterProductNode = document.getElementById(
+			FILTER_DROPDOWN_CLASS_NAME
+		);
+
+	filterProductNode.addEventListener('click', () => {
+		handleDropdownOpen(dropdownFilterProductNode);
+	});
+
+	document.addEventListener('click', event => {
+		handleDropdownClose(event, dropdownFilterProductNode, filterProductNode);
 	});
 };

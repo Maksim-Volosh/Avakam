@@ -129,13 +129,160 @@
 								/>
 							</svg>
 						</button> {% endcomment %}
-						<button class="products__recommendation-action" aria-label="filter">
-							<svg class="products__recommendation-action-filter">
-								<use
-									xlink:href="{% static 'img/sprite.svg' %}#filter-icon"
-								/>
-							</svg>
-						</button> 
+						<div class="products__recommendation-filter-inner">
+							<button id="js-products-filter" class="products__recommendation-action" aria-label="filter">
+								<svg class="products__recommendation-action-filter">
+									<use
+										xlink:href="{% static 'img/sprite.svg' %}#filter-icon"
+									/>
+								</svg>
+							</button>
+
+							<div id="js-dropdown-filter" class="dropdown dropdown_filter">
+								<form action="" class="dropdown__form dropdown__form_filter">
+									<fieldset class="dropdown__fieldset dropdown__fieldset_filter filter">
+										<legend class="visually-hidden">Выберете категорию</legend>
+										<ul class="filter__menu">
+											<li class="filter__category">
+												<button class="filter__category-btn" type="button">
+													<img src="{% static "img/svg/filter-realty.svg" %}" alt="" class="filter__category-btn-svg">
+													Недвижимость
+												</button>
+												<ul class="filter__submenu">
+													<li class="filter__subcategory">
+														<button class="filter__category-btn" type="button">Жилая недвижимость</button>
+														<ul class="filter__nested-submenu">
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Квартиры</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Частные дома</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Комнаты в коммунальных квартирах</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Апартаменты</button>
+															</li>
+														</ul>
+													</li>
+													<li class="filter__subcategory">
+														<button class="filter__category-btn" type="button">Коммерческая недвижимость</button>
+														<ul class="filter__nested-submenu">
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Офисы</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Торговые помещения</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Складские помещения</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Производственные объекты</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Гостиницы и хостелы</button>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li class="filter__category">
+												<button class="filter__category-btn" type="button">
+													<img src="{% static "img/svg/filter-realty.svg" %}" alt="" class="filter__category-btn-svg">
+													Недвижимость
+												</button>
+												<ul class="filter__submenu">
+													<li class="filter__subcategory">
+														<button class="filter__category-btn" type="button">Жилая недвижимость</button>
+														<ul class="filter__nested-submenu">
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Квартиры</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Частные дома</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Комнаты в коммунальных квартирах</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Апартаменты</button>
+															</li>
+														</ul>
+													</li>
+													<li class="filter__subcategory">
+														<button class="filter__category-btn" type="button">Коммерческая недвижимость</button>
+														<ul class="filter__nested-submenu">
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Офисы</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Торговые помещения</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Складские помещения</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Производственные объекты</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Гостиницы и хостелы</button>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li class="filter__category">
+												<button class="filter__category-btn" type="button">
+													<img src="{% static "img/svg/filter-realty.svg" %}" alt="" class="filter__category-btn-svg">
+													Недвижимость
+												</button>
+												<ul class="filter__submenu">
+													<li class="filter__subcategory">
+														<button class="filter__category-btn" type="button">Жилая недвижимость</button>
+														<ul class="filter__nested-submenu">
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Квартиры</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Частные дома</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Комнаты в коммунальных квартирах</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Апартаменты</button>
+															</li>
+														</ul>
+													</li>
+													<li class="filter__subcategory">
+														<button class="filter__category-btn" type="button">Коммерческая недвижимость</button>
+														<ul class="filter__nested-submenu">
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Офисы</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Торговые помещения</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Складские помещения</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Производственные объекты</button>
+															</li>
+															<li class="filter__nested-subcategory">
+																<button class="filter__category-btn filter__category-btn_pick">Гостиницы и хостелы</button>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</fieldset>
+								</form>
+							</div>
+						</div>
 						<div class="products__recommendation-sort-inner">
 							<button 
 								id="js-products-sort" class="products__recommendation-action" 

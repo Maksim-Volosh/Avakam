@@ -1,6 +1,7 @@
 .dropdown {
 	position: absolute;
 	top: 0;
+	max-height: 0;
 	padding: 48px 59px;
 	background-color: var(--background-white);
 	border: 2px solid #d9d9d9;
@@ -8,7 +9,8 @@
 	visibility: hidden;
 	opacity: 0;
 	z-index: 10;
-	transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out,
+		max-height 0.5s ease-in-out;
 }
 
 .dropdown_sort {
@@ -23,13 +25,22 @@
 	left: -211px;
 }
 
+.dropdown_filter {
+	padding: 10px 20px;
+}
+
 .dropdown_open {
+	max-height: 1000px;
 	visibility: visible;
 	opacity: 1;
 }
 
 .dropdown__form {
 	width: 200px;
+}
+
+.dropdown__form_filter {
+	width: 500px;
 }
 
 .dropdown__fieldset {
@@ -43,7 +54,8 @@
 	gap: 20px;
 }
 
-.dropdown__fieldset_sort {
+.dropdown__fieldset_sort,
+.dropdown__fieldset_filter {
 	margin-bottom: 0;
 }
 
@@ -94,6 +106,7 @@
 
 .dropdown__input:checked::after {
 	opacity: 1;
+	background-color: #000;
 }
 
 .dropdown__input:focus-visible {
@@ -205,4 +218,75 @@
 	padding-right: 12px;
 	font-family: var(--TTTravels-Demibold);
 	font-size: 14px;
+}
+
+/* ! dropdown filter */
+.filter {
+	gap: 10px;
+	font-family: var(--TTTravels-Demibold);
+	font-size: 16px;
+}
+
+.filter__menu {
+}
+
+.filter__category {
+}
+
+.filter__category-btn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	line-height: 2;
+}
+.filter__category-btn::after {
+	position: absolute;
+	top: 35%;
+	right: 25px;
+	width: 10px;
+	height: 10px;
+	content: '';
+	border: 1px solid var(--color-black);
+	border-width: 1px 1px 0 0;
+	transform: rotate(45deg);
+	transition: transform 0.5s ease-in-out;
+}
+
+.filter__category-btn-svg {
+	margin-right: 8px;
+}
+
+.filter__submenu {
+	margin-left: 48px;
+}
+
+.filter__nested-submenu {
+	margin-left: 18px;
+}
+
+.filter__submenu,
+.filter__nested-submenu {
+	display: flex;
+	flex-direction: column;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease-in-out;
+}
+
+.filter__submenu.subcategory_open,
+.filter__nested-submenu.subcategory_open {
+	max-height: 500px;
+}
+
+.filter__category-btn.subcategory_open::after {
+	transform: rotate(135deg);
+}
+
+.filter__category-btn_pick {
+	text-align: start;
+}
+
+.filter__category-btn_pick::after {
+	content: none;
 }
