@@ -10,14 +10,14 @@
 
 .not-found__title {
 	max-width: 1200px;
-	font-weight: 600;
+	font-family: var(--TTTravels-DB);
 	font-size: 64px;
 	color: var(--color-black);
 }
 
 .not-found__desc {
 	max-width: 1200px;
-	font-weight: 600;
+	font-family: var(--TTTravels-DB);
 	font-size: 36px;
 	text-align: center;
 	color: var(--color-black);

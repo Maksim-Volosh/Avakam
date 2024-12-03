@@ -5,4 +5,8 @@ export const adSwiperMainPageNode = document.getElementById('js-ad-main-sw');
 export const locationSelectDistrict = document.getElementById(
 		'js-location-select-district'
 	),
-	locationSelectCity = document.getElementById('js-location-select-city');
+	locationSelectCity = document.getElementById('js-location-select-city'),
+	locationFilterSelectRegion = document.getElementById(
+		'js-filter-location-region'
+	),
+	locationFilterSelectCity = document.getElementById('js-filter-location-city');

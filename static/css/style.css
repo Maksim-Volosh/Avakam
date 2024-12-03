@@ -78,6 +78,7 @@ fieldset {
 
 input {
 	outline: none;
+	border: none;
 }
 
 input[type='number']::-webkit-outer-spin-button,
@@ -95,6 +96,10 @@ input[type='number']:focus {
 .visually-hidden {
 	position: fixed;
 	transform: scale(0);
+}
+
+.body_fixed {
+	overflow: hidden;
 }
 
 .container {

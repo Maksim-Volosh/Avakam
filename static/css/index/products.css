@@ -46,8 +46,7 @@
 }
 
 /* ! dropdowns inners */
-.products__recommendation-sort-inner,
-.products__recommendation-filter-inner {
+.products__recommendation-sort-inner{
 	position: relative;
 }
 
