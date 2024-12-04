@@ -80,6 +80,21 @@
 	overflow-y: scroll;
 }
 
+.simplebar-track {
+	right: 15px;
+}
+.simplebar-track.simplebar-vertical {
+	width: 4px;
+	background-color: transparent;
+}
+.simplebar-scrollbar:before {
+	top: 32px;
+	right: 0;
+	bottom: 32px;
+	left: 0;
+	opacity: 1;
+}
+
 .filter__category-item:not(:last-child),
 .filter__subcategory-item:not(:last-child),
 .filter__nested-subcategory-item:not(:last-child) {
@@ -91,7 +106,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	padding-right: 30px;
+	padding-right: 80px;
 	width: 100%;
 	text-align: start;
 }
@@ -101,7 +116,7 @@
 .filter__category-item-btn::after {
 	position: absolute;
 	top: 35%;
-	right: 25px;
+	right: 60px;
 	width: 10px;
 	height: 10px;
 	content: '';

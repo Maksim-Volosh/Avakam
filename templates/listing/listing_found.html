@@ -4,6 +4,7 @@
 {% block title %}Avakam - founded{% endblock title %} 
 
 {% block links %}
+<link rel="stylesheet" href="{% static 'css/vars/simplebar.css' %}" />
 <link rel="stylesheet" href="{% static 'css/vars/swiper-bundle.min.css' %}" />
 
 <link rel="stylesheet" href="{% static 'css/index/advertisement.css' %}" />
@@ -14,6 +15,9 @@
 {% endblock links %} 
 
 {% block js %}
+<script
+src="{% static 'js/vars/simplebar.min.js' %}"
+defer></script>
 <script
 	src="{% static 'js/vars/swiper-bundle.min.js' %}"
 	defer
@@ -642,13 +646,13 @@
 	</section>
 </main>
 
-<div id="js-popup" class="popup filter popup_open">
+<div id="js-popup" class="popup filter">
 	<div id="js-popup-content" class="popup__content filter__content">
 		<h2 class="visually-hidden">window of products filter</h2>
 		<form action="" class="filter__form">
 			<fieldset class="filter__fieldset filter__fieldset_category">
 				<legend class="filter__title">Выберете категорию</legend>
-				<ul class="filter__category-list">
+				<ul class="filter__category-list" data-simplebar>
 					<li class="filter__category-item">
 						<button class="filter__category-item-btn" type="button">
 							<img src="{% static "img/svg/filter-realty.svg" %}" alt="" class="filter__category-item-btn-svg">
