@@ -23,7 +23,6 @@
 	padding: 50px;
 	cursor: auto;
 	z-index: 15;
-	transition: transform 0.5s ease-in-out;
 }
 
 .popup_open {
