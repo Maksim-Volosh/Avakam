@@ -9,6 +9,7 @@
 
 <link rel="stylesheet" href="{% static 'css/index/advertisement.css' %}" />
 <link rel="stylesheet" href="{% static 'css/index/products.css' %}" />
+<link rel="stylesheet" href="{% static 'css/breadcrumb.css' %}" />
 <link rel="stylesheet" href="{% static 'css/filter.css' %}" />
 {% endblock links %} 
 
@@ -120,6 +121,21 @@ defer></script>
 
 	<section class="products">
 		<div class="container products__container">
+			<nav class="products__breadcrumb breadcrumb__nav" aria-label="breadcrumb">
+				<ul class="breadcrumb__list">
+						<li class="breadcrumb__item">
+							<a class="breadcrumb__link"  href="/">Главная</a>
+						</li>
+						<li class="breadcrumb__item">
+							<a class="breadcrumb__link" href="/category">Категория</a>
+						</li>
+						<li class="breadcrumb__item">
+							<a class="breadcrumb__link" href="/category/subcategory">Подкатегория</a>
+						</li>
+						<li class="breadcrumb__item" aria-current="page">Женская сумочка</li>
+				</ul>
+			</nav>
+
 			<h2 class="visually-hidden">products of our site</h2>
 			<div class="products__recommendation-inner">
 				<div class="products__recommendation-title">
