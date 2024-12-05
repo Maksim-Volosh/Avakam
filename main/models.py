@@ -3,6 +3,7 @@ from django.core.exceptions import ValidationError
 
 
 class Category(models.Model):
+    category_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     slug = models.SlugField(max_length=50)
     active = models.BooleanField(default=True)
@@ -25,6 +26,7 @@ class Category(models.Model):
     
 
 class CategoryField(models.Model):
+    category_field_id = models.AutoField(primary_key=True)
     FIELD_TYPES = [
         ('checkbox', 'Чекбоксы (множественный выбор)'),
         ('radio', 'Кнопки (один выбор)'),
