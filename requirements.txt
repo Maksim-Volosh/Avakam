@@ -3,3 +3,4 @@ celery
 redis
 pillow
 django-celery-beat
+django-unfold
