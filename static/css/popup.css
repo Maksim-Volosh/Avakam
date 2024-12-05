@@ -22,7 +22,6 @@
 	overflow-y: auto;
 	padding: 50px;
 	cursor: auto;
-	transform: scale(0);
 	z-index: 15;
 	transition: transform 0.5s ease-in-out;
 }
@@ -30,8 +29,4 @@
 .popup_open {
 	opacity: 1;
 	visibility: visible;
-}
-
-.popup_open .popup__content {
-	transform: scale(1);
 }

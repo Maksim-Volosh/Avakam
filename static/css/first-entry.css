@@ -1,0 +1,67 @@
+.first-entry {
+}
+
+.first-entry__content {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translate(-50%, 100dvh);
+	width: 1065px;
+	padding: 82px 106px;
+	border-radius: 12px;
+}
+.popup_open .first-entry__content {
+	transform: translate(-50%, 0);
+}
+
+.first-entry__welcome {
+	margin-bottom: 32px;
+	font-family: var(--TTTravels-DB);
+	font-size: 36px;
+	color: var(--color-black);
+}
+
+.first-entry__desc {
+	margin-bottom: 48px;
+	font-family: var(--TTTravels-DB);
+	font-size: 24px;
+	color: var(--color-black);
+}
+
+.first-entry__form {
+}
+
+.first-entry__fieldset {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 600px;
+	gap: 40px 35px;
+}
+
+.first-entry__fieldset .choices {
+	width: 267px;
+}
+.first-entry__fieldset .choices[data-type*='select-one']::after {
+	right: 20px;
+	width: 8px;
+	height: 8px;
+}
+.first-entry__fieldset .choices[data-type*='select-one'].is-open::after {
+	top: 53%;
+}
+.first-entry__fieldset .choices[data-type*='select-one'] .choices__inner,
+.first-entry__fieldset .choices__list--dropdown .choices__item,
+.first-entry__fieldset .choices__list[aria-expanded] .choices__item {
+	padding: 20px 10px;
+}
+
+.first-entry__submit {
+	width: 140px;
+	height: 38px;
+	padding: 0px 10px;
+	border-radius: 12px;
+	background-color: var(--color-green);
+	color: var(--color-white);
+	font-family: var(--TTTravels-DB);
+	font-size: 15px;
+}

@@ -18,8 +18,12 @@
 		<link rel="stylesheet" href="{% static 'css/footer.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/navigation.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/dropdown.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/popup.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/choices.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/first-entry.css' %}" />
 
 		<script src="{% static 'js/vars/choices.min.js' %}" defer></script>
+		<script src="{% static 'js/pages/base.js' %}" type="module"></script>
 
 		{% block links %}{% endblock links %} {% block js %}{% endblock js %}
 	</head>
@@ -371,6 +375,37 @@
 				</div>
 			</div>
 		</footer>
+
+		<div id="js-first-entry-popup" class="popup first-entry">
+			<div
+				id="js-first-entry-popup-content"
+				class="popup__content first-entry__content"
+			>
+				<p class="first-entry__welcome">
+					Приветствуем на
+					<span class="green-color">Avakam</span>!
+				</p>
+				<p class="first-entry__desc">
+					Мы определили ваше местоположение как "
+					<span class="green-color"> Турция </span>
+					". Если это не соответствует действительности, пожалуйста, измените
+					его ниже. Это необходимо для корректного отображения объявлений.
+				</p>
+				<form class="first-entry__form">
+					<fieldset class="first-entry__fieldset">
+						<select id="js-first-entry-location-country">
+							<option hidden disabled selected value="country">Страна</option>
+							<option value="">Средиземноморский регион</option>
+						</select>
+						<select id="js-first-entry-location-region">
+							<option hidden disabled selected value="city">Район</option>
+							<option value="">Алания</option>
+						</select>
+						<button class="first-entry__submit">Сохранить</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
 
 		<script>
 			// Проверяем тему браузера: тёмная или светлая

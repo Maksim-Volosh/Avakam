@@ -9,4 +9,10 @@ export const locationSelectDistrict = document.getElementById(
 	locationFilterSelectRegion = document.getElementById(
 		'js-filter-location-region'
 	),
-	locationFilterSelectCity = document.getElementById('js-filter-location-city');
+	locationFilterSelectCity = document.getElementById('js-filter-location-city'),
+	locationFirstEntrySelectCountry = document.getElementById(
+		'js-first-entry-location-country'
+	),
+	locationFirstEntrySelectRegion = document.getElementById(
+		'js-first-entry-location-region'
+	);

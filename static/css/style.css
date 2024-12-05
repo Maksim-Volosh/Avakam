@@ -108,6 +108,10 @@ input[type='number']:focus {
 	margin: 0 auto;
 }
 
+.green-color {
+	color: var(--color-green);
+}
+
 /* 
 @media (min-width: 1441px) {
 	! стили для адаптива к 4к
