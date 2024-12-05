@@ -133,14 +133,14 @@
 }
 
 /* premium */
-.goods__inner-premium {
+.goods__advantage-list {
 	grid-area: premium;
 	display: flex;
 	gap: 11px;
 	padding-right: 30px;
 }
-.goods__advantage {
-	display: none;
+.goods__advantage-item {
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 24px;
@@ -149,10 +149,15 @@
 	background-color: #e6c100;
 	color: #fff;
 }
+.goods__advantage-svg {
+	display: none;
+	width: 18px;
+	height: 18px;
+}
 
-.premium_active .goods__advantage_prem,
-.to-fix_active .goods__advantage_to-fix {
-	display: flex;
+.premium_active .goods__advantage-svg_premium,
+.to-fix_active .goods__advantage-svg_to-fix {
+	display: block;
 }
 
 .goods__title {

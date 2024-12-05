@@ -398,17 +398,21 @@
 									</div>
 									<div class="goods__inner-desc">
 										<p class="goods__price">450 €</p>
-										<div class="goods__inner-premium">
-											<svg class="goods__advantage goods__advantage_prem">
-												<use
-													xlink:href="{% static 'img/sprite.svg' %}#premium-icon"
-												/>
-											</svg>
-											<svg class="goods__advantage goods__advantage_to-fix">
-												<use
-												xlink:href="{% static 'img/sprite.svg' %}#time-fix-icon" />
-											</svg>
-										</div>
+										<ul class="goods__advantage-list">
+											<li class="goods__advantage-item">
+												<svg class="goods__advantage-svg goods__advantage-svg_premium">
+													<use
+													xlink:href="{% static 'img/sprite.svg' %}#premium-icon" />
+												</svg>
+											</li>
+											<li class="goods__advantage-item">
+												<svg class="goods__advantage-svg goods__advantage-svg_to-fix">
+													<use
+													xlink:href="{% static 'img/sprite.svg' %}#time-fix-icon" />
+												</svg>
+											</li>
+											
+										</ul>
 										<h3 class="goods__title">Название товара</h3>
 										<p class="goods__location">
 											<span class="goods__city">Город</span>,
