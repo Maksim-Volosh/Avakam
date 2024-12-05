@@ -386,7 +386,7 @@
 			<div class="products__inner">
 				<div class="products__goods-inner goods">
 					<ul class="goods__list" arai-label="goods">
-						<li class="goods__item">
+						<li class="goods__item premium_active to-fix_active">
 							<article class="goods__article">
 								<a href="" class="goods__link">
 									<div class="goods__inner-img">
@@ -396,17 +396,31 @@
 											class="goods__img"
 										/>
 									</div>
+									<div class="goods__inner-desc">
 										<p class="goods__price">450 €</p>
+										<div class="goods__inner-premium">
+											<svg class="goods__advantage goods__advantage_prem">
+												<use
+													xlink:href="{% static 'img/sprite.svg' %}#premium-icon"
+												/>
+											</svg>
+											<svg class="goods__advantage goods__advantage_to-fix">
+												<use
+												xlink:href="{% static 'img/sprite.svg' %}#time-fix-icon" />
+											</svg>
+										</div>
 										<h3 class="goods__title">Название товара</h3>
 										<p class="goods__location">
 											<span class="goods__city">Город</span>,
 											<span class="goods__district">Район</span>
 										</p>
 										<p class="goods__time">Дата и время</p>
+									</div>
 								</a>
 								<button class="goods__favorite">
 									<svg class="goods__favorite-svg">
-										<use xlink:href="{% static 'img/sprite.svg' %}#favorite-o-icon" />
+										<use class="goods__favorite-use use_active" xlink:href="{% static 'img/sprite.svg' %}#favorite-o-icon" />
+										<use class="goods__favorite-use" xlink:href="{% static 'img/sprite.svg' %}#favorite-icon" />
 									</svg>
 								</button>
 								<div class="goods__options-inner">

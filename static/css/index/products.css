@@ -46,7 +46,7 @@
 }
 
 /* ! dropdowns inners */
-.products__recommendation-sort-inner{
+.products__recommendation-sort-inner {
 	position: relative;
 }
 
@@ -109,7 +109,18 @@
 	object-fit: cover;
 }
 
+.goods__inner-desc {
+	display: grid;
+	grid-template-areas:
+		'price premium'
+		'title title'
+		'location location'
+		'time time';
+	justify-content: space-between;
+}
+
 .goods__price {
+	grid-area: price;
 	margin-bottom: 3px;
 	font-family: var(--TTTravels-DB);
 	font-size: 25px;
@@ -117,7 +128,31 @@
 	color: var(--color-black);
 }
 
+/* premium */
+.goods__inner-premium {
+	grid-area: premium;
+	display: flex;
+	gap: 11px;
+	padding-right: 30px;
+}
+.goods__advantage {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	border-radius: 4px;
+	background-color: #e6c100;
+	color: #fff;
+}
+
+.premium_active .goods__advantage_prem,
+.to-fix_active .goods__advantage_to-fix {
+	display: flex;
+}
+
 .goods__title {
+	grid-area: title;
 	font-family: var(--TTTravels-DB);
 	font-weight: 600;
 	font-size: 16px;
@@ -125,6 +160,7 @@
 }
 
 .goods__location {
+	grid-area: location;
 	margin-bottom: 5px;
 	font-family: var(--TTTravels-DB);
 	font-weight: 600;
@@ -139,6 +175,7 @@
 } */
 
 .goods__time {
+	grid-area: time;
 	font-family: var(--TTTravels-DB);
 	font-weight: 600;
 	font-size: 16px;
@@ -157,6 +194,16 @@
 }
 .goods__favorite:hover {
 	color: red;
+}
+
+.goods__favorite-use {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3 ease-in-out, visibility 0.3 ease-in-out;
+}
+.goods__favorite-use.use_active {
+	opacity: 1;
+	visibility: visible;
 }
 
 .goods__favorite-svg {
